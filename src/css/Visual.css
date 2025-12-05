@@ -1,37 +1,80 @@
-body {
-    background-color: black;
+.Site {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
+.IndexBody {
+    background-color: rgb(0, 128, 128);
+    margin: 0;
+    padding: 0;
 }
 
-.MenuTopo {
+.IndexMenu {
+    background-color: rgb(0, 100, 100);
     display: flex;
     justify-content: center;
-    column-gap: 25px;
-    grid-template-columns: auto auto auto auto;
+    column-gap: 2px;
     height: 100%;
     margin-top: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.Home, .Curriculo, .Projetos {
+.IndexTxtMenu {
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 25px;
     margin-top: auto;
     margin-bottom: auto;
-    transition: color 0.25s ease-in 100ms;
-    box-shadow: inset 0 0 0 0 white;
-    transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
+    letter-spacing: 1px;
+    padding: 15px;
+    transition: all 0.5s ease;
 }
 
-.Home:hover, .Curriculo:hover, .Projetos:hover {
-    cursor: pointer;
-    color: black;
-    box-shadow: inset 200px 0 0 0 white;
+.IndexTxtMenu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    visibility: hidden;
+    clip: rect(0, 0, 0, 0);
+    transition: all 0.5s ease;
+}
+
+.IndexTxtMenu:hover {
+    color: white;
+    animation: neonFlicker 1.5s infinite alternate;
+}
+
+.IndexTxtMenu:hover::before {
+    visibility: visible;
+    clip: rect(0, 900px, 0, 0);
+    animation: neonFlicker 1.5s infinite alternate;
+}
+
+@keyframes neonFlicker {
+  0%, 100% {
+    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px #16ffff, 0 0 20px #16ffff, 0 0 25px #16ffff, 0 0 30px #16ffff, 0 0 35px #16ffff;
+  }
+  50% {
+    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px #16ffff, 0 0 20px #16ffff, 0 0 25px #16ffff, 0 0 30px #16ffff, 0 0 35px #16ffff, 0 0 40px #16ffff, 0 0 50px #16ffff, 0 0 75px #16ffff;
+  }
+}
+
+.IndexTxtFooter {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.IndexFooter {
+    background-color: rgb(0, 100, 100);
 }
