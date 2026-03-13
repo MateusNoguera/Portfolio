@@ -106,13 +106,17 @@
 }
 
 .IndexMenu {
-    /* background-color: rgb(25, 25, 25); */
     display: flex;
     justify-content: center;
     column-gap: 2px;
     height: 100%;
     margin-top: 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .IndexTxtMenu {
@@ -189,5 +193,24 @@
     font-size: 16px;
     letter-spacing: 1px;
     padding: 2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Resume / Currículo */
+
+.ResumeBody {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.ResumeMenu {
+    display: flex;
+    justify-content: center;
+    column-gap: 2px;
+    height: 100%;
+    margin-top: 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
