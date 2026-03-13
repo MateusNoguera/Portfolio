@@ -157,12 +157,11 @@ a {
 
 .IndexTxtMain {
     color: white;
-    /* background-color: blue; */
     text-align: center;
 }
 
 .IndexMain {
-  margin-top: 100px;
+  margin-top: 85px;
 }
 
 .IndexP-Name {
@@ -214,3 +213,73 @@ a {
     margin-top: 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.ResumeMain {
+  margin-top: 85px;
+}
+
+.ResumeTxtMain {
+    color: white;
+    text-align: center;
+}
+
+.ResumeTitle-P {
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.ResumeBildenContainer {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin-top: 100px;
+}
+
+.ImageBilden {
+  margin-right: 15px;
+}
+
+.TextBilden {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.InfoBildenContainer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  text-align: center;
+}
+
+.ResumeGEOvendasContainer {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin-top: 100px;
+}
+
+.ImageGEOvendas {
+  margin-right: 15px;
+}
+
+.TextGEOvendas {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.InfoGEOvendasContainer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  text-align: center;
+}
+
