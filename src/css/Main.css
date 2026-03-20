@@ -202,7 +202,8 @@ a {
     background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .ResumeMenu {
@@ -266,7 +267,7 @@ a {
 
 .ImageGEOvendas {
   margin-right: 15px;
-  margin-left: -68px;
+  margin-left: -69px;
 }
 
 .TextGEOvendas {
@@ -304,6 +305,33 @@ a {
 }
 
 .InfoBytecomContainer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  text-align: center;
+}
+
+.ResumeDessisContainer {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin-top: 50px; 
+}
+
+.ImageDessis {
+  margin-right: 15px;
+  margin-left: -114px;
+}
+
+.TextDessis {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  align-self: center; 
+}
+
+.InfoDessisContainer {
   color: white;
   display: flex;
   justify-content: center;
