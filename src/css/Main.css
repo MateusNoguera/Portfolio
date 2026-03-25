@@ -155,6 +155,18 @@ a {
     animation: neonFlicker 1.5s infinite alternate;
 }
 
+.IconContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -49px;
+}
+
+.MenuIcon {
+  height: 45px;
+  width: 55px;
+  margin-right: 10px;
+}
+
 .IndexTxtMain {
     color: white;
     text-align: center;
@@ -173,6 +185,10 @@ a {
 .IndexP-About {
   font-size: 25px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.pre-line-text {
+  white-space: pre-line;
 }
 
 @keyframes neonFlicker {
