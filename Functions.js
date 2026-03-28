@@ -9,7 +9,6 @@ const translations = {
                         "\n\n Atualmente meu principal objetivo é voltar a trabalhar com programação. É a área específica em que eu mais me destaco e mais tenho vontade de crescer." +
                         "\n Também é a área que mais me da satisfação de atuar e aprender novas tecnologias." + 
                         "\n No momento não estou buscando uma linguágem em específico, mas me inserir novamente em um cargo de programador/desenvolvedor." + 
-                        "\n\n Sou uma pessoa mais reservada, inicialmente não de falar muito, porém com o tempo e convivência isso tende mudar." + 
                         "\n\n Tenho facilidade em aprender novas tecnologias, além de me adaptar rapidamente em ambientes novos." + 
                         "\n\n\n\n Para contato e mais informações deixo abaixo meus perfis do LinkedIn e GitHub."
     },
@@ -23,7 +22,6 @@ const translations = {
                         "\n\n Atualmente meu principal objetivo é voltar a trabalhar com programação. É a área específica em que eu mais me destaco e mais tenho vontade de crescer." +
                         "\n Também é a área que mais me da satisfação de atuar e aprender novas tecnologias." + 
                         "\n No momento não estou buscando uma linguágem em específico, mas me inserir novamente em um cargo de programador/desenvolvedor." + 
-                        "\n\n Sou uma pessoa mais reservada, inicialmente não de falar muito, porém com o tempo e convivência isso tende mudar." + 
                         "\n\n Tenho facilidade em aprender novas tecnologias, além de me adaptar rapidamente em ambientes novos." + 
                         "\n\n\n\n Para contato e mais informações deixo abaixo meus perfis do LinkedIn e GitHub."
     }
@@ -38,10 +36,23 @@ function setLanguage(language) {
     });
     // Optional: save user preference to localStorage
     localStorage.setItem('preferredLang', language);
+
+    if(language == 'pt') {
+        const iconBr = document.getElementById("BrazilIcon");
+        iconBr.classList.add("BorderLangIcon");
+        const iconUs = document.getElementById("UsaIcon");
+        iconUs.classList.remove("BorderLangIcon");
+    } else if(language == 'en') {
+        const iconBr = document.getElementById("BrazilIcon");
+        iconBr.classList.remove("BorderLangIcon");
+        const iconUs = document.getElementById("UsaIcon");
+        iconUs.classList.add("BorderLangIcon");
+    }
+
 }
 
 // Set the default or saved language on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    const savedLang = localStorage.getItem('preferredLang') || 'pt';
     setLanguage(savedLang);
 });

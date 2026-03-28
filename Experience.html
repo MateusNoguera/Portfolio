@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="src/css/Main.css">
     <title>Experience</title>
 </head>
-<body class="ResumeBody">
+<body class="ExperienceBody">
     <div class="Site">
         <div class="stars"></div>
         <div class="shooting-star"></div>
@@ -15,19 +15,23 @@
         <div class="shooting-star"></div>
         <div class="shooting-star"></div>
         
-        <header class="ResumeHeader">
-            <div class="ResumeMenu">
+        <header class="ExperienceHeader">
+            <div class="ExperienceMenu">
                 <!-- Somente em TESTES usar o nome do arquivo.HTML -->
                 <!-- Em PRD usar ./ para o index e ./Nome para os demais -->
                 <div class="IndexTxtMenu"> <a href="./"> Sobre </a> </div>
                 <div class="IndexTxtMenu"> <a href="./Experience.html"> Experiência </a> </div>
                 <div class="IndexTxtMenu"> <a> Updates </a> </div>
             </div>
+            <div class="IconContainer">
+            <input type="image" src="images/BrasilIcon.png" onclick="setLanguage('pt')" class="MenuIcon" id="BrazilIcon"/>
+            <input type="image" src="images/EUAIcon.png" onclick="setLanguage('en')" class="MenuIcon" id="UsaIcon"/>
+            </div>
         </header>
 
-        <main class="ResumeMain">
-            <div class="ResumeTitle-P"> <p> Experiência </p> </div>
-            <div class="ResumeBildenContainer">
+        <main class="ExperienceMain">
+            <div class="ExperienceTitle-P"> <p> Experiência </p> </div>
+            <div class="ExperienceBildenContainer">
                 <div class="ImageBilden"> <img src="images/BildenNegociosLogo.jpg" alt="Logo empresa Bilden"></div>
                 <div class="TextBilden"> Bilden Resultados com Inteligência <br>
                     Junho 2021 - Agosto 2025
@@ -40,7 +44,7 @@
                 </p>
             </div>
 
-            <div class="ResumeGEOvendasContainer">
+            <div class="ExperienceGEOvendasContainer">
                 <div class="ImageGEOvendas"> <img src="images/GEOvendas.jpg" alt="Logo empresa IbTech"> </div>
                 <div class="TextGEOvendas"> GEOvendas <br>
                     Fevereiro 2021 - Março 2021
@@ -53,7 +57,7 @@
                 </p>
             </div>
 
-            <div class="ResumeBytecomContainer">
+            <div class="ExperienceBytecomContainer">
                 <div class="ImageBytecom"> <img src="images/BytecomLogo.jpg" alt="Logo empresa Bytecom sistemas"> </div>
                 <div class="TextBytecom"> Bytecom Sistemas <br>
                     Setembro 2020 - Novembro 2020
@@ -67,7 +71,7 @@
                 </p>
             </div>
 
-            <div class="ResumeDessisContainer">
+            <div class="ExperienceDessisContainer">
                 <div class="ImageDessis"> <img src="images/DessisLogo.jpg" alt="Logo empresa Dessis sistemas"> </div>
                 <div class="TextDessis"> Dessis Sistemas <br>
                     Maio 2018 - Agosto 2020
@@ -79,10 +83,10 @@
                 </p>
             </div>
 
-            <div class="ResumeTitle-P"> <p> Idiomas </p> </div>
+            <div class="ExperienceTitle-P"> <p> Idiomas </p> </div>
 
         </main>
-
+        <script src="Functions.js"></script>
     </div>
 </body>
 </html>
