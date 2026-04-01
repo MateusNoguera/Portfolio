@@ -358,3 +358,22 @@ a {
   font-size: 23px;
   text-align: center;
 }
+
+/* Updates */
+
+.UpdatesBody {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.UpdatesMenu {
+    justify-content: center;
+    column-gap: 2px;
+    height: 100%;
+    margin-top: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+}
