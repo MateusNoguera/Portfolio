@@ -24,20 +24,20 @@
   width: 1px;
   height: 1px;
   position: absolute;
-  background: white;
-  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
-    22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
-    38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
-    53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
-    68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
-    83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
-    98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
-    18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
-    35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
-    50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
-    65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
-    80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
-    95vw 75vh 2px white;
+  background: #fff;
+  box-shadow: 2vw 5vh 2px #fff, 10vw 8vh 2px #fff, 15vw 15vh 1px #fff,
+    22vw 22vh 1px #fff, 28vw 12vh 2px #fff, 32vw 32vh 1px #fff,
+    38vw 18vh 2px #fff, 42vw 35vh 1px #fff, 48vw 25vh 2px #fff,
+    53vw 42vh 1px #fff, 58vw 15vh 2px #fff, 63vw 38vh 1px #fff,
+    68vw 28vh 2px #fff, 73vw 45vh 1px #fff, 78vw 32vh 2px #fff,
+    83vw 48vh 1px #fff, 88vw 20vh 2px #fff, 93vw 52vh 1px #fff,
+    98vw 35vh 2px #fff, 5vw 60vh 1px #fff, 12vw 65vh 2px #fff,
+    18vw 72vh 1px #fff, 25vw 78vh 2px #fff, 30vw 85vh 1px #fff,
+    35vw 68vh 2px #fff, 40vw 82vh 1px #fff, 45vw 92vh 2px #fff,
+    50vw 75vh 1px #fff, 55vw 88vh 2px #fff, 60vw 95vh 1px #fff,
+    65vw 72vh 2px #fff, 70vw 85vh 1px #fff, 75vw 78vh 2px #fff,
+    80vw 92vh 1px #fff, 85vw 82vh 2px #fff, 90vw 88vh 1px #fff,
+    95vw 75vh 2px #fff;
   animation: twinkle 8s infinite linear;
 }
 
@@ -45,7 +45,7 @@
   position: absolute;
   width: 100px;
   height: 2px;
-  background: linear-gradient(90deg, white, transparent);
+  background: linear-gradient(90deg, #fff, transparent);
   animation: shoot 3s infinite ease-in;
 }
 
@@ -94,14 +94,14 @@
   position: absolute;
   width: 1px;
   height: 1px;
-  background: white;
-  box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
-    33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
-    57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
-    81vw 48vh 1px white, 89vw 32vh 2px white, 97vw 45vh 1px white,
-    3vw 68vh 2px white, 11vw 75vh 1px white, 19vw 82vh 2px white,
-    27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
-    51vw 92vh 2px white, 59vw 78vh 1px white;
+  background: #fff;
+  box-shadow: 8vw 12vh 2px #fff, 16vw 18vh 1px #fff, 24vw 25vh 2px #fff,
+    33vw 15vh 1px #fff, 41vw 28vh 2px #fff, 49vw 35vh 1px #fff,
+    57vw 22vh 2px #fff, 65vw 42vh 1px #fff, 73vw 28vh 2px #fff,
+    81vw 48vh 1px #fff, 89vw 32vh 2px #fff, 97vw 45vh 1px #fff,
+    3vw 68vh 2px #fff, 11vw 75vh 1px #fff, 19vw 82vh 2px #fff,
+    27vw 88vh 1px #fff, 35vw 72vh 2px #fff, 43vw 85vh 1px #fff,
+    51vw 92vh 2px #fff, 59vw 78vh 1px #fff;
   animation: twinkle 6s infinite linear reverse;
 }
 
@@ -116,11 +116,11 @@
 
 a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
 .IndexTxtMenu {
-    color: white;
+    color: #fff;
     font-weight: 500;
     font-size: 25px;
     margin-top: auto;
@@ -168,7 +168,7 @@ a {
 }
 
 .IndexTxtMain {
-    color: white;
+    color: #fff;
     text-align: center;
 }
 
@@ -197,17 +197,17 @@ a {
 
 @keyframes neonFlicker {
   0%, 100% {
-    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px gray, 0 0 20px gray, 0 0 25px gray, 0 0 30px gray, 0 0 35px gray;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px gray, 0 0 20px gray, 0 0 25px gray, 0 0 30px gray, 0 0 35px gray;
   }
   50% {
-    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px gray, 0 0 20px gray, 0 0 25px gray, 0 0 30px gray, 0 0 35px gray, 0 0 40px gray, 0 0 50px gray, 0 0 75px gray;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px gray, 0 0 20px gray, 0 0 25px gray, 0 0 30px gray, 0 0 35px gray, 0 0 40px gray, 0 0 50px gray, 0 0 75px gray;
   }
 }
 
 .IndexTxtFooter {
     display: flex;
     justify-content: center;
-    color: white;
+    color: #fff;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -240,16 +240,23 @@ a {
 }
 
 .ExperienceTxtMain {
-    color: white;
+    color: #fff;
     text-align: center;
 }
 
 .ExperienceTitle-P {
-  color: white;
+  color: #fff;
   text-align: center;
   font-size: 35px;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.TextExperiences {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  align-self: center;
 }
 
 .ExperienceBildenContainer {
@@ -263,15 +270,8 @@ a {
   margin-right: 15px;
 }
 
-.TextBilden {
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  align-self: center;
-}
-
 .InfoBildenContainer {
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: center;
   font-size: 23px;
@@ -290,15 +290,8 @@ a {
   margin-left: -69px;
 }
 
-.TextGEOvendas {
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  align-self: center;
-}
-
 .InfoGEOvendasContainer {
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: center;
   font-size: 23px;
@@ -317,15 +310,8 @@ a {
   margin-left: -27px;
 }
 
-.TextBytecom {
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  align-self: center;
-}
-
 .InfoBytecomContainer {
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: center;
   font-size: 23px;
@@ -344,15 +330,8 @@ a {
   margin-left: -114px;
 }
 
-.TextDessis {
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  align-self: center; 
-}
-
 .InfoDessisContainer {
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: center;
   font-size: 23px;
