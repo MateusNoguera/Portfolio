@@ -19,18 +19,19 @@
             <div class="ExperienceMenu">
                 <!-- Somente em TESTES usar o nome do arquivo.HTML -->
                 <!-- Em PRD usar ./ para o index e ./Nome para os demais -->
-                <div class="IndexTxtMenu"> <a data-i18n="index.abouttxt" href="./"></a> </div>
-                <div class="IndexTxtMenu"> <a data-i18n="index.experiencetxt" href="./Experience.html"></a> </div>
-                <div class="IndexTxtMenu"> <a data-i18n="index.updatestxt" href="./Updates.html"></a> </div>
+                <div class="IndexTxtMenu"> <a data-i18n="site.abouttxt" href="./"></a> </div>
+                <div class="IndexTxtMenu"> <a data-i18n="site.experiencetxt" href="./Experience.html"></a> </div>
+                <div class="IndexTxtMenu"> <a data-i18n="site.updatestxt" href="./Updates.html"></a> </div>
             </div>
             <div class="IconContainer">
-                <input type="image" src="images/BrasilIcon.png" onclick="setLanguage('ptbr')" class="MenuIcon" id="BrazilIcon"/>
+                <input type="image" src="images/BrazilIcon.png" onclick="setLanguage('ptbr')" class="MenuIcon" id="BrazilIcon"/>
                 <input type="image" src="images/EUAIcon.png" onclick="setLanguage('en')" class="MenuIcon" id="UsaIcon"/>
             </div>
         </header>
 
         <main class="ExperienceMain">
-            <div class="ExperienceTitle-P"> <p data-i18n="index.experiencetxt"></p> </div>
+            <div class="ExperienceTitles"> <p data-i18n="site.experiencetxt"></p> </div>
+
             <div class="ExperienceBildenContainer">
                 <div class="ImageBilden"> <img src="images/BildenNegociosLogo.jpg" alt="Logo empresa Bilden"></div>
                 <div class="TextExperiences"> <p data-i18n="experience.txtbilden" class="pre-line-text"></p> </div>
@@ -45,31 +46,32 @@
 
             <div class="ExperienceBytecomContainer">
                 <div class="ImageBytecom"> <img src="images/BytecomLogo.jpg" alt="Logo empresa Bytecom sistemas"> </div>
-                <div class="TextExperiences"> Bytecom Sistemas <br>
-                    Setembro 2020 - Novembro 2020
-                </div>
+                <div class="TextExperiences"> <p data-i18n="experience.txtbytecom" class="pre-line-text"></p> </div>
             </div>
-            <div class="InfoBytecomContainer">
-                <p>
-                    Atuei como desenvolvedor Delphi e desenvolvedor mobile nos sistemas da empresa. <br>
-                    Delphi foi usado no sistema ERP, front-end e back-end. Implementando novas funções e fazendo manutenção do conteúdo já existente. <br>
-                    A parte de programação mobile foi usada em um sistema complementar ao ERP, utilizando Kotlin, Android Studio e Node Js.
-                </p>
-            </div>
+            <div class="InfoBytecomContainer"> <p data-i18n="experience.infobytecom" class="pre-line-text"></p> </div>
 
             <div class="ExperienceDessisContainer">
                 <div class="ImageDessis"> <img src="images/DessisLogo.jpg" alt="Logo empresa Dessis sistemas"> </div>
-                <div class="TextExperiences"> Dessis Sistemas <br>
-                    Maio 2018 - Agosto 2020
-                </div>
+                <div class="TextExperiences"> <p data-i18n="experience.txtdessis" class="pre-line-text"></p> </div>
             </div>
-            <div class="InfoDessisContainer">
-                <p>
-                    Atuei como desenvolvedor Delphi no sistema ERP da empresa. <br>
-                </p>
+            <div class="InfoDessisContainer"> <p data-i18n="experience.infodessis" class="pre-line-text"></p> </div>
+
+            <div data-i18n="experience.languagestxt" class="ExperienceTitles LanguagesSection"></div>
+
+            <div class="ExperienceLanguagesContainer">
+                <div> <img class="ExperiencelanguageIcons" src="images/BrazilIcon.png" alt="Brazil"> </div>
+                <div data-i18n="experience.languagetxtptbr" class="TextExperiences ExperiencelanguageTxt pre-line-text"></div>
             </div>
 
-            <div class="ExperienceTitle-P"> <p> Idiomas </p> </div>
+            <div class="ExperienceLanguagesContainer">
+                <div> <img class="ExperiencelanguageIcons" src="images/EUAIcon.png" alt="United States of America"> </div>
+                <div data-i18n="experience.languagetxtusa" class="TextExperiences ExperiencelanguageTxt pre-line-text"></div>
+            </div>
+
+            <div class="ExperienceLanguagesContainer">
+                <div> <img class="ExperiencelanguageIcons" src="images/JapanIcon.png" alt="Japan"> </div>
+                <div data-i18n="experience.languagetxtjapan" class="TextExperiences ExperiencelanguageTxt pre-line-text"></div>
+            </div>
 
         </main>
 
