@@ -4,12 +4,11 @@ const translations = {
         "footer.devname": "by Mateus Nogueira",
         "index.aboutme": "IT professional with experience since 2018, working in various roles such as programmer, customer support, and, more recently, Business Intelligence consulting." +
                         "\n\n I'm a calm person, with an aptitude for learning new technologies and adapting to different contexts and work environments." + 
-                        "\n\n Currently, I'm refocusing on software development, with an interest in different areas of programming, including web, mobile, and game development, and also seeking to improve my skills in modern frameworks." +
-                        "\n\n\n Languages: Delphi, Javascript, C#, Java, Python, PHP" +
-                        "\n\n Web: HTML, CSS" +
-                        "\n\n Databases: Firebird, SQLServer, MySQL" +
-                        "\n\n Business Intelligence: Qlik Sense, QlikView, Qlik Cloud, NPrinting, ETL" +
-                        "\n\n Other: Git, Node Js, Unity, Unreal Engine, Microsoft Office" + 
+                        "\n\n Currently, I'm refocusing on software development, with an interest in different areas of programming, including web, mobile, and game development, and also seeking to improve my skills in new tools and languages." +
+                        "\n\n\n Recently used: " +
+                        "\n\n HTML, CSS, Javascript, Git, Qlik Sense, QlikView, Qlik Cloud, Nprinting." +
+                        "\n\n\n\n Others: " +
+                        "\n\n Delphi, Node Js, Firebird, SQLServer, MySQL, C#, Java, Unity, Unreal Engine, Microsoft Office, Python, PHP" + 
                         "\n\n\n\n Contact information is provided below.",
         "site.abouttxt": "About",
         "site.experiencetxt": "Work Experience",
@@ -30,19 +29,27 @@ const translations = {
         "experience.languagestxt": "Languages",
         "experience.languagetxtptbr": "Portuguese - Native",
         "experience.languagetxtusa": "English - Advanced/Fluent",
-        "experience.languagetxtjapan": "Japanese - Beginner"
+        "experience.languagetxtjapan": "Japanese - Beginner",
+        "experience.educationtxt": "Education",
+        "education.txtsenai": "SENAI/SC - Serviço Nacional de Aprendizagem Industrial",
+        "education.bachelortxt": "Bachelor of Technology - BTech, Internet Systems" +
+                                "\n 2016 - 2019.",
+        "education.ittechniciantxt": "IT Technician." +
+                                    "\n 2015 - 2016.",
+        "education.highschooltxt": "High School." +
+                                    "\n 2014 - 2016."
+        
     },
     ptbr: {
         "index.completename": "Mateus Nogueira",
         "footer.devname": "by Mateus Nogueira",
         "index.aboutme": "Profissional de TI com experiência desde 2018, atuando em diferentes funções como programador, suporte ao cliente e, mais recentemente, consultoria em Business Intelligence." +
                         "\n\n Sou uma pessoa calma, com facilidade para aprender novas tecnologias e me adaptar a diferentes contextos e ambientes de trabalho." + 
-                        "\n\n Atualmente estou focando novamente em desenvolvimento de software, com interesse em diferentes áreas da programação, incluindo desenvolvimento Web, Mobile e jogos, além de estar buscando evoluir em frameworks modernos." + 
-                        "\n\n\n Linguagens: Delphi, Javascript, C#, Java, Python, PHP" +
-                        "\n\n Web: HTML, CSS" +
-                        "\n\n Bancos de dados: Firebird, SQLServer, MySQL" +
-                        "\n\n Business Intelligence: Qlik Sense, QlikView, Qlik Cloud, NPrinting, ETL" +
-                        "\n\n Outros: Git, Node Js, Unity, Unreal Engine, Microsoft Office" + 
+                        "\n\n Atualmente estou focando novamente em desenvolvimento de software, com interesse em diferentes áreas da programação, incluindo desenvolvimento web, mobile e jogos, além de estar buscando evoluir em novas ferramentas." + 
+                        "\n\n\n Tecnologias usadas recentemente: " +
+                        "\n\n HTML, CSS, Javascript, Git, Qlik Sense, QlikView, Qlik Cloud, Nprinting." +
+                        "\n\n\n\n Outras tecnologias: " +
+                        "\n\n Delphi, Node Js, Firebird, SQLServer, MySQL, C#, Java, Unity, Unreal Engine, Microsoft Office, Python, PHP" + 
                         "\n\n\n\n Segue abaixo algumas formas para contato.",
         "site.abouttxt": "Sobre",
         "site.experiencetxt": "Experiência",
@@ -63,7 +70,15 @@ const translations = {
         "experience.languagestxt": "Idiomas",
         "experience.languagetxtptbr": "Português - Nativo",
         "experience.languagetxtusa": "Inglês - Avançado/Fluente",
-        "experience.languagetxtjapan": "Japonês - Iniciante"
+        "experience.languagetxtjapan": "Japonês - Iniciante",
+        "experience.educationtxt": "Formação",
+        "education.txtsenai": "SENAI/SC - Serviço Nacional de Aprendizagem Industrial",
+        "education.bachelortxt": "Curso Superior de Tecnologia (CST), Tecnólogo em Sistemas para Internet. " +
+                                "\n Cursado entre 2016 - 2019.",
+        "education.ittechniciantxt": "Técnico em Informática." +
+                                    "\n Cursado em 2015 - 2016.",
+        "education.highschooltxt": "Ensino médio." +
+                                    "\n Cursado em 2014 - 2016."
     }
 };
 
@@ -74,7 +89,7 @@ function setLanguage(language) {
             element.textContent = translations[language][key];
         }
     });
-    //save user preference to localStorage
+    
     localStorage.setItem('preferredLang', language);
 
     const iconBr = document.getElementById("BrazilIcon");
@@ -93,7 +108,7 @@ function setLanguage(language) {
 
 }
 
-// Set the default or saved language on page load
+//On page load
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLang') || 'ptbr';
     setLanguage(savedLang);
