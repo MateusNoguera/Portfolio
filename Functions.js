@@ -13,6 +13,7 @@ const translations = {
         "site.abouttxt": "About",
         "site.experiencetxt": "Work Experience",
         "site.updatestxt": "Updates",
+        "site.phone": "+55 47 9 9246-2691",
         "experience.txtbilden": "Bilden Resultados com Inteligência" +
                                 "\n June 2021 - August 2025",
         "experience.infobilden": "Developing and Managing Business Intelligence projects primarily using Qlik Cloud, Qlik Sense, Qlik View, NPrinting.",
@@ -54,6 +55,7 @@ const translations = {
         "site.abouttxt": "Sobre",
         "site.experiencetxt": "Experiência",
         "site.updatestxt": "Updates",
+        "site.phone": "+55 47 9 9246-2691",
         "experience.txtbilden": "Bilden Resultados com Inteligência" +
                                 "\n Junho 2021 - Agosto 2025",
         "experience.infobilden": "Desenvolvendo e fazendo manutenção de projetos de Business Intelligence utilizando principalmente Qlik Sense, Qlik View, Qlik Cloud, Nprinting.",
@@ -113,3 +115,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLang') || 'ptbr';
     setLanguage(savedLang);
 });
+
+function copyPhone() {
+    navigator.clipboard.writeText("+55 47 9 9246-2691");
+
+    const copyPhoneTxt = document.getElementById("CopyPhoneTxt");
+
+    copyPhoneTxt.classList.remove("fa-copy");
+    copyPhoneTxt.classList.add("fa-check");
+    copyPhoneTxt.style.color = "#1fd655";
+
+    setTimeout(() => {
+        copyPhoneTxt.classList.remove("fa-check");
+        copyPhoneTxt.classList.add("fa-copy");
+        copyPhoneTxt.style.color = "";
+    }, 1000);
+
+}

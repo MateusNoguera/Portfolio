@@ -88,7 +88,6 @@
   }
 }
 
-/* Additional twinkling stars with different animation timing */
 .stars::after {
   content: "";
   position: absolute;
@@ -170,6 +169,7 @@ a {
 .IndexTxtMain {
     color: #fff;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .IndexMain {
@@ -213,6 +213,106 @@ a {
     letter-spacing: 1px;
     padding: 2px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.IndexPhone {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.PhoneIcon {
+  position: relative;
+  top: 25%;
+}
+
+.IndexPhone li {
+  list-style: none;
+}
+
+.IndexTxtPhone {
+  color: #fff;
+  font-weight: 500;
+  font-size: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+  letter-spacing: 1px;
+  padding: 15px;
+  position: relative;
+  line-height: 1.2;
+}
+
+.IconCopy {
+  position: relative;
+  top: 25%;
+  transition: all 1s ease;
+}
+
+.IconCopy:hover {
+  cursor: pointer;
+}
+
+.IndexSocialsList {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.IndexSocialsList li {
+  list-style: none;
+}
+
+.IndexSocialsList li a {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.IndexSocialsList li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+
+.IndexSocialsList li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.IndexSocialsList li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+.IndexSocialsList li a:hover:before {
+  top: 0;
+}
+
+.IndexSocialsList li:nth-child(1) a:before{
+  background: #0f70d3;
+}
+
+.IndexSocialsList li:nth-child(2) a:before{
+  background: #0f0f0f;
 }
 
 /* Experience */
