@@ -164,6 +164,7 @@ a {
   height: 45px;
   width: 55px;
   margin-right: 10px;
+  transition: all 0.3s ease;
 }
 
 .IndexTxtMain {
@@ -508,4 +509,43 @@ a {
     margin-top: 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
+}
+
+.UpdatesMain {
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+  display: grid;
+  place-items: center;
+}
+
+.UpdatesRoadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.UpdatesRoadmapCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, background 0.2s ease;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.UpdatesRoadmapCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.UpdatesRoadmapCardTitle {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.UpdatesRoadmapCardInfo {
+  font-size: 20px;
 }

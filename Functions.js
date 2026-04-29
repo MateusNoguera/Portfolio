@@ -38,7 +38,9 @@ const translations = {
         "education.ittechniciantxt": "IT Technician." +
                                     "\n 2015 - 2016.",
         "education.highschooltxt": "High School." +
-                                    "\n 2014 - 2016."
+                                    "\n 2014 - 2016.",
+        "updates.projecttxt": "Projects",
+        "updates.infoprojecttxt": "Criar uma nova aba parar mostrar e comentar sobre projetos criados."
         
     },
     ptbr: {
@@ -80,7 +82,9 @@ const translations = {
         "education.ittechniciantxt": "Técnico em Informática." +
                                     "\n Cursado em 2015 - 2016.",
         "education.highschooltxt": "Ensino médio." +
-                                    "\n Cursado em 2014 - 2016."
+                                    "\n Cursado em 2014 - 2016.",
+        "updates.projecttxt": "Projetos",
+        "updates.infoprojecttxt": "Criar uma nova aba parar mostrar e comentar sobre projetos criados."
     }
 };
 
@@ -126,9 +130,9 @@ function copyPhone() {
     copyPhoneTxt.style.color = "#1fd655";
 
     setTimeout(() => {
+        copyPhoneTxt.style.color = "";
         copyPhoneTxt.classList.remove("fa-check");
         copyPhoneTxt.classList.add("fa-copy");
-        copyPhoneTxt.style.color = "";
     }, 1000);
 
 }
