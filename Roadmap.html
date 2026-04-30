@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/Main.css">
+    <title>Roadmap</title>
+</head>
+<body class="RoadmapBody">
+
+    <div class="Site">
+        <div class="stars"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+
+        <header class="RoadmapHeader">
+            <div class="RoadmapMenu">
+                <!-- Somente em TESTES usar o nome do arquivo.HTML -->
+                <!-- Em PRD usar ./ para o index e ./Nome para os demais -->
+                <div class="IndexTxtMenu"> <a data-i18n="site.abouttxt" href="./"></a> </div>
+                <div class="IndexTxtMenu"> <a data-i18n="site.experiencetxt" href="./Experience.html"></a> </div>
+                <div class="IndexTxtMenu"> <a data-i18n="site.roadmaptxt" href="./Roadmap.html"></a> </div>
+            </div>
+            <div class="IconContainer">
+                <input type="image" src="images/BrazilIcon.png" onclick="setLanguage('ptbr')" class="MenuIcon" id="BrazilIcon"/>
+                <input type="image" src="images/EUAIcon.png" onclick="setLanguage('en')" class="MenuIcon" id="UsaIcon"/>
+            </div>
+        </header>
+
+        <main class="RoadmapMain">
+            <div class="Roadmap">
+                <div class="RoadmapCard StatusUpcoming">
+                    <span data-i18n="roadmap.upcomingstatustxt" class="RoadmapCardStatus"></span>
+
+                    <p data-i18n="roadmap.projecttxt" class="RoadmapCardTitle"></p>
+                    <p data-i18n="roadmap.infoprojecttxt" class="RoadmapCardInfo"></p>
+
+                    <div class="RoadmapCardProgressContainer">
+                        <div class="RoadmapCardProgress">
+                            <div class="RoadmapCardProgressBar" style="width: 0%;"></div>
+                        </div>
+
+                        <span class="RoadmapCardProgressValue">0%</span>
+                    </div>
+                </div>
+
+                <div class="RoadmapCard StatusUpcoming">
+
+                    <span data-i18n="roadmap.upcomingstatustxt" class="RoadmapCardStatus"></span>
+
+                    <p data-i18n="roadmap.responsivenesstxt" class="RoadmapCardTitle"></p>
+                    <p data-i18n="roadmap.inforesponsivenesstxt" class="RoadmapCardInfo"></p>
+
+                    <div class="RoadmapCardProgressContainer">
+                        <div class="RoadmapCardProgress">
+                            <div class="RoadmapCardProgressBar" style="width: 0%;"></div>
+                        </div>
+
+                        <span class="RoadmapCardProgressValue">0%</span>
+                    </div>
+                </div>
+
+                <div class="RoadmapCard StatusInDevelopment">
+                    <span data-i18n="roadmap.indevelopmentstatustxt" class="RoadmapCardStatus">IN DEVELOPMENT</span>
+
+                    <p data-i18n="roadmap.uiuxtxt" class="RoadmapCardTitle"></p>
+                    <p data-i18n="roadmap.infouiuxtxt" class="RoadmapCardInfo"></p>
+
+                    <div class="RoadmapCardProgressContainer">
+                        <div class="RoadmapCardProgress">
+                            <div class="RoadmapCardProgressBar" style="width: 30%;"></div>
+                        </div>
+
+                        <span class="RoadmapCardProgressValue">30%</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="IndexFooter">
+            <div data-i18n="footer.devname" class="IndexTxtFooter"></div>
+        </footer>
+
+        <script src="Functions.js"></script>
+    </div>
+</body>
+</html>

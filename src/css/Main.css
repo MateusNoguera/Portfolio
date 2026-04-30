@@ -492,9 +492,9 @@ a {
   margin-bottom: 20px;
 }
 
-/* Updates */
+/* Roadmap */
 
-.UpdatesBody {
+.RoadmapBody {
     min-height: 100vh;
     background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
     margin: 0;
@@ -502,7 +502,7 @@ a {
     overflow: hidden;
 }
 
-.UpdatesMenu {
+.RoadmapMenu {
     justify-content: center;
     column-gap: 2px;
     height: 100%;
@@ -511,20 +511,20 @@ a {
     display: flex;
 }
 
-.UpdatesMain {
+.RoadmapMain {
   height: calc(100vh - var(--header-height) - var(--footer-height));
   display: grid;
   place-items: center;
 }
 
-.UpdatesRoadmap {
+.Roadmap {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.UpdatesRoadmapCard {
-  background: rgba(255, 255, 255, 0.05);
+.RoadmapCard {
+  background: #ffffff0d; /* 5% opacity */
   padding: 20px;
   border-radius: 12px;
   backdrop-filter: blur(10px);
@@ -535,17 +535,77 @@ a {
   color: #fff;
 }
 
-.UpdatesRoadmapCard:hover {
+.RoadmapCard:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.08);
+  background: #ffffff14; /* 8% opacity */
 }
 
-.UpdatesRoadmapCardTitle {
+.RoadmapCardTitle {
   margin-bottom: 10px;
   font-size: 30px;
   font-weight: bold;
 }
 
-.UpdatesRoadmapCardInfo {
+.RoadmapCardInfo {
   font-size: 20px;
+}
+
+.RoadmapCardStatus {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.RoadmapCardProgressContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.RoadmapCardProgress {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #ffffff26; /* 15% opacity */
+}
+
+.RoadmapCardProgressBar {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.RoadmapCardProgressValue {
+  min-width: 45px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.StatusCompleted {
+  border-left: 4px solid #16864c;
+}
+
+.StatusCompleted .RoadmapCardStatus,
+.StatusCompleted .RoadmapCardProgressBar {
+  background: #16864c;
+}
+
+.StatusInDevelopment {
+  border-left: 4px solid #1057a3;
+}
+
+.StatusInDevelopment .RoadmapCardStatus,
+.StatusInDevelopment .RoadmapCardProgressBar {
+  background: #1057a3;
+}
+
+.StatusUpcoming {
+  border-left: 4px solid #7d28d3;
+}
+
+.StatusUpcoming .RoadmapCardStatus,
+.StatusUpcoming .RoadmapCardProgressBar {
+  background: #7d28d3;
 }

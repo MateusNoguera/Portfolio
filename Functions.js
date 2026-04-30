@@ -12,7 +12,7 @@ const translations = {
                         "\n\n\n\n Contact information is provided below.",
         "site.abouttxt": "About",
         "site.experiencetxt": "Work Experience",
-        "site.updatestxt": "Updates",
+        "site.roadmaptxt": "Roadmap",
         "site.phone": "+55 47 9 9246-2691",
         "experience.txtbilden": "Bilden Resultados com Inteligência" +
                                 "\n June 2021 - August 2025",
@@ -39,12 +39,15 @@ const translations = {
                                     "\n 2015 - 2016.",
         "education.highschooltxt": "High School." +
                                     "\n 2014 - 2016.",
-        "updates.projecttxt": "Projects",
-        "updates.infoprojecttxt": "Criar uma nova aba parar mostrar e comentar sobre projetos criados.",
-        "updates.responsivenesstxt": "Responsiveness",
-        "updates.inforesponsivenesstxt": "Adjust to automatically adapt the display to different devices and resolutions.",
-        "updates.uiuxtxt": "UI/UX & Animations",
-        "updates.infouiuxtxt": "Improve the website's visuals, animations, and interactions."
+        "roadmap.projecttxt": "Projects",
+        "roadmap.infoprojecttxt": "Create a new tab to display and comment on created projects.",
+        "roadmap.responsivenesstxt": "Responsiveness",
+        "roadmap.inforesponsivenesstxt": "Adjust to automatically adapt the display to different devices and resolutions.",
+        "roadmap.uiuxtxt": "UI/UX & Animations",
+        "roadmap.infouiuxtxt": "Improve the website's visuals, animations, and interactions.",
+        "roadmap.completedstatustxt": "COMPLETED",
+        "roadmap.upcomingstatustxt": "UPCOMING",
+        "roadmap.indevelopmentstatustxt": "IN DEVELOPMENT"
         
     },
     ptbr: {
@@ -60,7 +63,7 @@ const translations = {
                         "\n\n\n\n Segue abaixo algumas formas para contato.",
         "site.abouttxt": "Sobre",
         "site.experiencetxt": "Experiência",
-        "site.updatestxt": "Updates",
+        "site.roadmaptxt": "Roadmap",
         "site.phone": "+55 47 9 9246-2691",
         "experience.txtbilden": "Bilden Resultados com Inteligência" +
                                 "\n Junho 2021 - Agosto 2025",
@@ -87,12 +90,15 @@ const translations = {
                                     "\n Cursado em 2015 - 2016.",
         "education.highschooltxt": "Ensino médio." +
                                     "\n Cursado em 2014 - 2016.",
-        "updates.projecttxt": "Projetos",
-        "updates.infoprojecttxt": "Criar uma nova aba parar mostrar e comentar sobre projetos criados.",
-        "updates.responsivenesstxt": "Responsividade",
-        "updates.inforesponsivenesstxt": "Ajustar a visualização para adaptar automaticamente em diferentes dispositivos e resoluções.",
-        "updates.uiuxtxt": "Interface e Animações",
-        "updates.infouiuxtxt": "Melhorar o visual, animações e interações do site."
+        "roadmap.projecttxt": "Projetos",
+        "roadmap.infoprojecttxt": "Criar uma nova aba parar mostrar e comentar sobre projetos criados.",
+        "roadmap.responsivenesstxt": "Responsividade",
+        "roadmap.inforesponsivenesstxt": "Ajustar a visualização para adaptar automaticamente em diferentes dispositivos e resoluções.",
+        "roadmap.uiuxtxt": "Interface e Animações",
+        "roadmap.infouiuxtxt": "Melhorar o visual, animações e interações do site.",
+        "roadmap.completedstatustxt": "CONCLUÍDO",
+        "roadmap.upcomingstatustxt": "EM BREVE",
+        "roadmap.indevelopmentstatustxt": "EM DESENVOLVIMENTO"
     }
 };
 
