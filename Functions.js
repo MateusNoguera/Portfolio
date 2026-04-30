@@ -40,7 +40,11 @@ const translations = {
         "education.highschooltxt": "High School." +
                                     "\n 2014 - 2016.",
         "updates.projecttxt": "Projects",
-        "updates.infoprojecttxt": "Criar uma nova aba parar mostrar e comentar sobre projetos criados."
+        "updates.infoprojecttxt": "Criar uma nova aba parar mostrar e comentar sobre projetos criados.",
+        "updates.responsivenesstxt": "Responsiveness",
+        "updates.inforesponsivenesstxt": "Adjust to automatically adapt the display to different devices and resolutions.",
+        "updates.uiuxtxt": "UI/UX & Animations",
+        "updates.infouiuxtxt": "Improve the website's visuals, animations, and interactions."
         
     },
     ptbr: {
@@ -84,7 +88,11 @@ const translations = {
         "education.highschooltxt": "Ensino médio." +
                                     "\n Cursado em 2014 - 2016.",
         "updates.projecttxt": "Projetos",
-        "updates.infoprojecttxt": "Criar uma nova aba parar mostrar e comentar sobre projetos criados."
+        "updates.infoprojecttxt": "Criar uma nova aba parar mostrar e comentar sobre projetos criados.",
+        "updates.responsivenesstxt": "Responsividade",
+        "updates.inforesponsivenesstxt": "Ajustar a visualização para adaptar automaticamente em diferentes dispositivos e resoluções.",
+        "updates.uiuxtxt": "Interface e Animações",
+        "updates.infouiuxtxt": "Melhorar o visual, animações e interações do site."
     }
 };
 
