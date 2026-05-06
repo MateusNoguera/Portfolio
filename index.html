@@ -5,59 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/Main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title>Sobre</title>
+    <title data-i18n="header.resumecv"></title>
 </head>
 <body class="IndexBody">
     
     <div class="Site">
-        <div class="stars"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        <div class="shooting-star"></div>
-        
-        <header class="IndexHeader">
-            <div class="IndexMenu">
-                <!-- Somente em TESTES usar o nome do arquivo.HTML -->
-                <!-- Em PRD usar ./ para o index e ./Nome para os demais -->
-                <div class="IndexTxtMenu"> <a data-i18n="site.abouttxt" href="./"></a> </div>
-                <div class="IndexTxtMenu"> <a data-i18n="site.experiencetxt" href="./Experience.html"></a> </div>
-                <div class="IndexTxtMenu"> <a data-i18n="site.roadmaptxt" href="./Roadmap.html"></a> </div>
-            </div>
-            <div class="IconContainer">
-                <input type="image" src="images/BrazilIcon.png" onclick="setLanguage('ptbr')" class="MenuIcon" id="BrazilIcon"/>
-                <input type="image" src="images/EUAIcon.png" onclick="setLanguage('en')" class="MenuIcon" id="UsaIcon"/>
+        <div class="Stars"></div>
+        <div class="ShootingStar StarOne"></div>
+        <div class="ShootingStar StarTwo"></div>
+        <div class="ShootingStar StarThree"></div>
+        <div class="ShootingStar StarFour"></div>
+        <div class="ShootingStar StarFive"></div>
+
+        <header class="Header">
+            <nav class="MenuNav">
+                <a href="./" class="MenuNavLink" data-i18n="header.resumecv"></a>
+                <a href="" class="MenuNavLink" data-i18n="header.roadmap">Roadmap</a>
+                <a href="" class="MenuNavLink" data-i18n="header.projects">Projetos</a>
+            </nav>
+
+            <div class="MenuLanguageButtons">
+                <button onclick="setLanguage('ptbr')" class="LanguageButton">
+                    <img src="images/BrazilIcon.png" alt="Português">
+                </button>
+
+                <button onclick="setLanguage('en')" class="LanguageButton">
+                    <img src="images/EUAIcon.png" alt="English">
+                </button>
             </div>
         </header>
 
         <main class="IndexMain">
-            <div class="IndexTxtMain">
-                <p data-i18n="index.completename" class="IndexP-Name" ></p>
-                <p data-i18n="index.aboutme" class="IndexP-About pre-line-text"></p>
-            </div>
+            <section class="AboutSection">
+                <h1 class="AboutDevName" data-i18n="main.dev.name"></h1>
+                <p class="AboutDevDescription" data-i18n="main.dev.description"></p>
+            </section>
 
-            <div class="IndexSocials">
+            <section class="ExperienceSection">
+                <h2 class="SectionTitle" data-i18n="main.experiencetitle"></h2>
 
-                <ul class="IndexPhone">
-                    <li> <a ><i class="fa-solid fa-mobile-screen-button fa-2xl PhoneIcon"></i></a> </li>
-                    <li> <a data-i18n="site.phone" class="IndexTxtPhone"></a> </li>
-                    <li> <a ><i class="fa-solid fa-copy fa-2xl IconCopy" onclick="copyPhone()" id="CopyPhoneTxt"></i></a> </li>
-                </ul>
+                <article class="ExperienceCard">
+                    <img class="ExperienceLogo" src="images/BildenNegociosLogo.jpg" alt="Logo Bilden">
 
-                <ul class="IndexSocialsList">
-                    <li> <a href="https://www.linkedin.com/in/mateus-nogueira-b3b5a614b/" target="_blank"><i class="fab fa-linkedin-in icon"></i></a> </li>
-                    <li> <a href="https://github.com/MateusNoguera" target="_blank"><i class="fab fa-github icon"></i></a> </li>
-                </ul>
-            </div>
+                    <div class="ExperienceHeader">
+                        <h3 data-i18n="main.experience.bilden.name"></h3>
+                        <p data-i18n="main.experience.bilden.period"></p>
+                    </div>
+
+                    <p class="ExperienceDescription" data-i18n="experience.bilden.description"></p>
+                </article>
+            </section>
 
         </main>
 
-        <footer class="IndexFooter">
-            <div data-i18n="footer.devname" class="IndexTxtFooter"></div>
-        </footer>
-
-        <script src="Functions.js"></script>
     </div>
+
+    <script src="Functions.js"></script>
 </body>
 </html>
