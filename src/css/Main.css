@@ -10,6 +10,8 @@
 .IndexBody {
   min-height: 100vh;
   background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .Site {
@@ -18,7 +20,6 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: minmax(0, 1fr);
-  overflow: hidden;
 }
 
 .Header, .IndexMain, .Footer {
@@ -32,11 +33,13 @@
 }
 
 .Stars {
-  position: absolute;
+  position: fixed;
   width: 1px;
   height: 1px;
   inset: 0;
   background: #fff;
+  z-index: 0;
+  pointer-events: none;
   box-shadow: 2vw 5vh 2px #fff, 10vw 8vh 2px #fff, 15vw 15vh 1px #fff,
     22vw 22vh 1px #fff, 28vw 12vh 2px #fff, 32vw 32vh 1px #fff,
     38vw 18vh 2px #fff, 42vw 35vh 1px #fff, 48vw 25vh 2px #fff,
@@ -54,11 +57,13 @@
 }
 
 .ShootingStar {
-  position: absolute;
+  position: fixed;
   width: 100px;
   height: 2px;
   background: linear-gradient(90deg, #fff, transparent);
   animation: shoot 3s infinite ease-in;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .StarOne {
