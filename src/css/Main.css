@@ -21,7 +21,7 @@
   overflow: hidden;
 }
 
-.Header, .Main, .Footer {
+.Header, .IndexMain, .Footer {
   position: relative;
   z-index: 1;
 }
@@ -224,7 +224,7 @@
   margin-bottom: 48px;
 }
 
-.ExperienceCard {
+.SectionCard {
   display: grid;
   grid-template-columns: 110px 1fr;
   gap: 20px 28px;
@@ -238,26 +238,130 @@
   object-fit: cover;
 }
 
-.ExperienceHeader {
+.SectionHeader {
   color: #fff;
   text-align: left;
 }
 
-.ExperienceHeader h3 {
+.SectionHeader h3 {
   font-size: clamp(22px, 2.5vw, 30px);
 }
 
-.ExperienceHeader p {
+.SectionHeader p {
   font-size: clamp(18px, 2vw, 24px);
-  font-weight: bold;
 }
 
-.ExperienceDescription {
+.SectionDescription {
   grid-column: 1 / 3;
   color: #fff;
   font-size: clamp(18px, 2vw, 24px);
   line-height: 1.5;
   text-align: center;
+  white-space: pre-line;
+}
+
+.LanguagesSection {
+  width: min(100%, 1000px);
+  margin-top: 80px;
+}
+
+.LanguageLogo {
+  width: 110px;
+  height: 77px;
+  object-fit: cover;
+}
+
+.EducationSection {
+  width: min(100%, 1000px);
+  margin-top: 80px;
+}
+
+.ContactSection {
+  width: min(100%, 1000px);
+  margin-top: 80px;
+}
+
+.ContactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.PhoneContainer {
+  color: #fff;
+  font-size: clamp(22px, 2vw, 36px);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.CopyButton {
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.CopyButton:hover {
+  transform: scale(1.1);
+}
+
+.SocialContainer {
+  display: flex;
+  gap: 40px;
+}
+
+.SocialButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #fff;
+  color: #262626;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.SocialIcon {
+  position: relative;
+  font-size: 52px;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.SocialButton:hover .SocialIcon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.SocialButton::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.SocialButton:hover::before {
+  top: 0;
+}
+
+.SocialButtonLinkedIn::before {
+  background: #0f70d3;
+}
+
+.SocialButtonGithub::before {
+  background: #0f0f0f;
 }
 
 /* Finish Main */
@@ -282,19 +386,36 @@
     font-size: 18px;
   }
 
-    .ExperienceCard {
-    grid-template-columns: 1fr;
-    justify-items: center;
+  .SectionCard {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  }
+
+  .SectionHeader {
     text-align: center;
   }
 
-  .ExperienceHeader {
-    text-align: center;
-  }
-
-  .ExperienceDescription {
+  .SectionDescription {
     grid-column: 1;
   }
+
+  .PhoneContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .PhoneText {
+    font-size: 26px;
+  }
+
+  .SocialButton {
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+  }
+
 }
 
 /* Finish Index / Resume(cv) */

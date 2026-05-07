@@ -30,7 +30,7 @@
                 </button>
 
                 <button onclick="setLanguage('en')" class="LanguageButton">
-                    <img src="images/EUAIcon.png" alt="English">
+                    <img src="images/USAIcon.png" alt="English">
                 </button>
             </div>
         </header>
@@ -42,18 +42,150 @@
             </section>
 
             <section class="ExperienceSection">
-                <h2 class="SectionTitle" data-i18n="main.experiencetitle"></h2>
+                <h2 class="SectionTitle" data-i18n="main.experience.title"></h2>
 
-                <article class="ExperienceCard">
+                <div class="SectionCard">
                     <img class="ExperienceLogo" src="images/BildenNegociosLogo.jpg" alt="Logo Bilden">
 
-                    <div class="ExperienceHeader">
+                    <div class="SectionHeader">
                         <h3 data-i18n="main.experience.bilden.name"></h3>
                         <p data-i18n="main.experience.bilden.period"></p>
                     </div>
 
-                    <p class="ExperienceDescription" data-i18n="experience.bilden.description"></p>
-                </article>
+                    <p class="SectionDescription" data-i18n="main.experience.bilden.description"></p>
+                </div>
+
+                <div class="SectionCard">
+                    <img class="ExperienceLogo" src="images/GEOvendas.jpg" alt="Logo GEOVendas">
+
+                    <div class="SectionHeader">
+                        <h3 data-i18n="main.experience.geovendas.name"></h3>
+                        <p data-i18n="main.experience.geovendas.period"></p>
+                    </div>
+
+                    <p class="SectionDescription" data-i18n="main.experience.geovendas.description"></p>
+                </div>
+
+                <div class="SectionCard">
+                    <img class="ExperienceLogo" src="images/BytecomLogo.jpg" alt="Logo Bytecom">
+
+                    <div class="SectionHeader">
+                        <h3 data-i18n="main.experience.bytecom.name"></h3>
+                        <p data-i18n="main.experience.bytecom.period"></p>
+                    </div>
+
+                    <p class="SectionDescription" data-i18n="main.experience.bytecom.description"></p>
+                </div>
+
+                <div class="SectionCard">
+                    <img class="ExperienceLogo" src="images/DessisLogo.jpg" alt="Logo Dessis">
+
+                    <div class="SectionHeader">
+                        <h3 data-i18n="main.experience.dessis.name"></h3>
+                        <p data-i18n="main.experience.dessis.period"></p>
+                    </div>
+
+                    <p class="SectionDescription" data-i18n="main.experience.dessis.description"></p>
+                </div>
+            </section>
+
+            <section class="LanguagesSection">
+                <h2 class="SectionTitle" data-i18n="main.languages.title"></h2>
+
+                <div class="SectionCard">
+                    <img class="LanguageLogo" src="images/BrazilIcon.png" alt="Portuguese">
+
+                    <div class="SectionHeader">
+                        <h3 data-i18n="main.languages.portuguese.name"></h3>
+                        <p data-i18n="main.languages.portuguese.level"></p>
+                    </div>
+
+                    <p class="SectionDescription" data-i18n="main.languages.portuguese.description"></p>
+                </div>
+
+                <div class="SectionCard">
+                    <img class="LanguageLogo" src="images/USAIcon.png" alt="English">
+
+                    <div class="SectionHeader">
+                        <h3 data-i18n="main.languages.english.name"></h3>
+                        <p data-i18n="main.languages.english.level"></p>
+                    </div>
+
+                    <p class="SectionDescription" data-i18n="main.languages.english.description"></p>
+                </div>
+
+                <div class="SectionCard">
+                    <img class="LanguageLogo" src="images/JapanIcon.png" alt="Japanese">
+
+                    <div class="SectionHeader">
+                        <h3 data-i18n="main.languages.japanese.name"></h3>
+                        <p data-i18n="main.languages.japanese.level"></p>
+                    </div>
+
+                    <p class="SectionDescription" data-i18n="main.languages.japanese.description"></p>
+                </div>
+            </section>
+
+            <section class="EducationSection">
+                <h2 class="SectionTitle" data-i18n="main.education.title"></h2>
+
+                <div class="SectionCard">
+                    <img class="ExperienceLogo" src="images/SenaiScLogo.jpg" alt="Logo SenaiSC">
+
+                    <div class="SectionHeader">
+                        <h3 data-i18n="main.education.senai.name"></h3>
+                        <p data-i18n="main.education.bachelor.period"></p>
+                    </div>
+
+                    <p class="SectionDescription" data-i18n="main.education.bachelor.description"></p>
+                </div>
+
+                <div class="SectionCard">
+                    <img class="ExperienceLogo" src="images/SenaiScLogo.jpg" alt="Logo SenaiSC">
+
+                    <div class="SectionHeader">
+                        <h3 data-i18n="main.education.senai.name"></h3>
+                        <p data-i18n="main.education.ittechnician.period"></p>
+                    </div>
+
+                    <p class="SectionDescription" data-i18n="main.education.ittechnician.description"></p>
+                </div>
+
+                <div class="SectionCard">
+                    <img class="ExperienceLogo" src="images/SenaiScLogo.jpg" alt="Logo SenaiSC">
+
+                    <div class="SectionHeader">
+                        <h3 data-i18n="main.education.senai.name"></h3>
+                        <p data-i18n="main.education.highschool.period"></p>
+                    </div>
+
+                    <p class="SectionDescription" data-i18n="main.education.highschool.description"></p>
+                </div>
+            </section>
+
+            <section class="ContactSection">
+                <h2 class="SectionTitle" data-i18n="main.contact.title"></h2>
+
+                <div class="ContactContainer">
+                    <div class="PhoneContainer">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+
+                        <span class="PhoneText" data-i18n="main.contact.dev.phone"></span>
+
+                        <button class="CopyButton" onclick="copyPhone()">
+                            <i class="fa-solid fa-copy fa-2xl" id="CopyPhoneIcon"></i>
+                        </button>
+                    </div>
+
+                    <div class="SocialContainer">
+                        <a href="https://www.linkedin.com/in/mateus-nogueira-b3b5a614b/" target="_blank" class="SocialButton SocialButtonLinkedIn">
+                            <i class="fa-brands fa-linkedin-in SocialIcon"></i> </a>
+
+                        <a href="https://github.com/MateusNoguera" target="_blank" class="SocialButton SocialButtonGithub">
+                            <i class="fa-brands fa-github SocialIcon"></i> </a>
+                    </div>
+                    
+                </div>
             </section>
 
         </main>
