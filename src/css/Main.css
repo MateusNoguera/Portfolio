@@ -168,6 +168,19 @@
   background: transparent;
   cursor: pointer;
   padding: 4px;
+  border-radius: 50%;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.LanguageButton:hover {
+  transform: scale(1.12);
+}
+
+.LanguageButton:active {
+  transform: scale(0.92);
 }
 
 .LanguageButton img {
@@ -175,6 +188,20 @@
   height: 42px;
   object-fit: cover;
   border-radius: 50%;
+  display: block;
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease;
+}
+
+.LanguageButton:hover img {
+  filter: brightness(1.25);
+}
+
+.LanguageButton.ActiveLanguage {
+  box-shadow:
+    0 0 8px rgba(255,255,255,0.4),
+    0 0 18px rgba(255,255,255,0.25);
 }
 
 /* Finish Header */
@@ -300,11 +327,32 @@
   color: #fff;
   background: transparent;
   cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .CopyButton:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
+}
+
+.CopySuccess {
+  color: #4ade80;
+  animation: copyPop 0.35s ease;
+}
+
+@keyframes copyPop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.35);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .SocialContainer {

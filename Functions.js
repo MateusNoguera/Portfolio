@@ -103,6 +103,17 @@ function setLanguage(language) {
     
     localStorage.setItem('preferredLang', language);
 
+    document.querySelectorAll('.LanguageButton')
+    .forEach(button => {
+        button.classList.remove('ActiveLanguage');
+    });
+
+    const activeButton = document.querySelector(`[onclick="setLanguage('${language}')"]`);
+
+    if (activeButton) {
+        activeButton.classList.add('ActiveLanguage');
+    }
+
 }
 
 //On page load
@@ -111,6 +122,27 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(savedLang);
 });
 
+let copyTimeout;
+
 function copyPhone() {
+
     navigator.clipboard.writeText("+55 47 9 9246-2691");
+
+    const icon = document.getElementById("CopyPhoneIcon");
+
+    icon.classList.remove("fa-copy");
+    icon.classList.add("fa-check");
+
+    icon.classList.add("CopySuccess");
+
+    clearTimeout(copyTimeout);
+
+    copyTimeout = setTimeout(() => {
+
+        icon.classList.remove("fa-check");
+        icon.classList.add("fa-copy");
+
+        icon.classList.remove("CopySuccess");
+
+    }, 1200);
 }
