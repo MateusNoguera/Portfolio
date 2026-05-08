@@ -1,5 +1,6 @@
 const translations = {
     en: {
+        "site.title": "Mateus Nogueira | Portfolio",
         "header.resumecv": "Resume (CV)",
         "header.roadmap": "Roadmap",
         "header.projects": "Projects",
@@ -43,9 +44,11 @@ const translations = {
         "main.education.highschool.period": "2014 - 2016.",
         "main.education.highschool.description": "High School.",
         "main.contact.title": "Contact",
-        "main.contact.dev.phone": "+55 47 9 9246-2691"
+        "main.contact.dev.phone": "+55 47 9 9246-2691",
+        "roadmap.title": "Roadmap"
     },
     ptbr: {
+        "site.title": "Mateus Nogueira | Portfólio",
         "header.resumecv": "Currículo",
         "header.roadmap": "Roadmap",
         "header.projects": "Projetos",
@@ -89,7 +92,8 @@ const translations = {
         "main.education.highschool.period": "2014 - 2016.",
         "main.education.highschool.description": "Ensino médio.",
         "main.contact.title": "Contato",
-        "main.contact.dev.phone": "+55 47 9 9246-2691"
+        "main.contact.dev.phone": "+55 47 9 9246-2691",
+        "roadmap.title": "Roadmap"
     }
 };
 
@@ -122,6 +126,19 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(savedLang);
 });
 
+window.addEventListener("scroll", () => {
+
+  const header = document.querySelector(".Header");
+
+  if (window.scrollY > 40) {
+    header.classList.add("HeaderScrolled");
+  }
+  else {
+    header.classList.remove("HeaderScrolled");
+  }
+
+});
+
 let copyTimeout;
 
 function copyPhone() {
@@ -146,3 +163,29 @@ function copyPhone() {
 
     }, 1200);
 }
+
+const reveals = document.querySelectorAll(".Reveal");
+
+window.addEventListener("scroll", () => {
+
+    reveals.forEach(element => {
+
+        const windowHeight = window.innerHeight;
+        const revealTop =
+            element.getBoundingClientRect().top;
+
+        if (revealTop < windowHeight - 100) {
+            element.classList.add("ActiveReveal");
+        }
+
+    });
+
+});
+
+document.addEventListener("mousemove", (event) => {
+  const x = (event.clientX / window.innerWidth - 0.5) * 15;
+  const y = (event.clientY / window.innerHeight - 0.5) * 15;
+
+  document.documentElement.style.setProperty("--starsx", `${x}px`);
+  document.documentElement.style.setProperty("--starsy", `${y}px`);
+});

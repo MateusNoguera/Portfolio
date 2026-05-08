@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 *{
   box-sizing: border-box;
   border: 0;
@@ -5,9 +9,9 @@
   margin: 0;
 }
 
-/* Start Index / Resume(cv) */
+/* Start Resume(cv) */
 
-.IndexBody {
+.SiteBody {
   min-height: 100vh;
   background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   background-attachment: fixed;
@@ -54,6 +58,8 @@
     80vw 92vh 1px #fff, 85vw 82vh 2px #fff, 90vw 88vh 1px #fff,
     95vw 75vh 2px #fff;
   animation: twinkle 8s infinite linear;
+  transform: translate(var(--starsx, 0), var(--starsy, 0));
+  transition: transform 0.15s linear;
 }
 
 .ShootingStar {
@@ -133,8 +139,6 @@
   animation: twinkle 6s infinite linear reverse;
 }
 
-/* Start Header */
-
 .Header {
   position: fixed;
   z-index: 10;
@@ -143,9 +147,16 @@
   justify-content: flex-end;
   width: 100%;
   padding: 16px 32px;
-  background: rgba(5, 5, 20, 0.40);
+  background: rgba(5, 5, 20, 0.10);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition:
+    background-color 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.HeaderScrolled {
+  background-color:rgba(5, 5, 20, 0.92);
 }
 
 .MenuNav {
@@ -166,6 +177,10 @@
     color 0.3s ease,
     transform 0.3s ease,
     text-shadow 0.3s ease;
+}
+
+.MenuNavLink.ActivePage::after {
+  transform: scaleX(1);
 }
 
 .MenuNavLink::after {
@@ -237,10 +252,6 @@
     0 0 8px #ffffff66,
     0 0 18px #ffffff40;
 }
-
-/* Finish Header */
-
-/* Start Main */
 
 .IndexMain {
   position: relative;
@@ -446,7 +457,60 @@
   background: #0f0f0f;
 }
 
-/* Finish Main */
+.FadeUp {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.ActiveReveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* End Resume(cv) */
+
+/* Start Roadmap */
+
+.RoadmapMain {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 130px 24px 80px;
+}
+
+.RoadmapSection {
+  width: min(100%, 850px);
+  text-align: center;
+}
+
+.RoadmapTitle {
+  color: #fff;
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 16px;
+}
+
+/* End Roadmap */
+
+/* Start Responsive */
 
 @media (max-width: 600px) {
   .Header {
@@ -500,4 +564,4 @@
 
 }
 
-/* Finish Index / Resume(cv) */
+/* End Responsive */

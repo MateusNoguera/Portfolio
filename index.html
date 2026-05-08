@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio/resume of Mateus Nogueira, software developer focused on backend, web development and Business Intelligence.">
     <link rel="stylesheet" href="src/css/Main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title data-i18n="header.resumecv"></title>
+    <link rel="icon" href="images/SiteIcon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <title data-i18n="site.title"></title>
 </head>
-<body class="IndexBody">
+<body class="SiteBody">
     
     <div class="Site">
         <div class="Stars"></div>
@@ -19,8 +22,8 @@
 
         <header class="Header">
             <nav class="MenuNav">
-                <a href="./" class="MenuNavLink" data-i18n="header.resumecv"></a>
-                <a href="" class="MenuNavLink" data-i18n="header.roadmap">Roadmap</a>
+                <a href="./" class="MenuNavLink ActivePage" data-i18n="header.resumecv"></a>
+                <a href="./Roadmap.html" class="MenuNavLink" data-i18n="header.roadmap">Roadmap</a>
                 <a href="" class="MenuNavLink" data-i18n="header.projects">Projetos</a>
             </nav>
 
@@ -36,12 +39,12 @@
         </header>
 
         <main class="IndexMain">
-            <section class="AboutSection">
+            <section class="AboutSection FadeUp">
                 <h1 class="AboutDevName" data-i18n="main.dev.name"></h1>
                 <p class="AboutDevDescription" data-i18n="main.dev.description"></p>
             </section>
 
-            <section class="ExperienceSection">
+            <section class="ExperienceSection FadeUp">
                 <h2 class="SectionTitle" data-i18n="main.experience.title"></h2>
 
                 <div class="SectionCard">
@@ -89,7 +92,7 @@
                 </div>
             </section>
 
-            <section class="LanguagesSection">
+            <section class="LanguagesSection Reveal">
                 <h2 class="SectionTitle" data-i18n="main.languages.title"></h2>
 
                 <div class="SectionCard">
@@ -126,7 +129,7 @@
                 </div>
             </section>
 
-            <section class="EducationSection">
+            <section class="EducationSection Reveal">
                 <h2 class="SectionTitle" data-i18n="main.education.title"></h2>
 
                 <div class="SectionCard">
@@ -163,7 +166,7 @@
                 </div>
             </section>
 
-            <section class="ContactSection">
+            <section class="ContactSection" Reveal>
                 <h2 class="SectionTitle" data-i18n="main.contact.title"></h2>
 
                 <div class="ContactContainer">
@@ -192,6 +195,6 @@
 
     </div>
 
-    <script src="Functions.js"></script>
+    <script src="js/Functions.js"></script>
 </body>
 </html>
