@@ -21,10 +21,14 @@
         <div class="ShootingStar StarFive"></div>
 
         <header class="Header">
+            
             <nav class="MenuNav">
-                <a href="./" class="MenuNavLink ActivePage" data-i18n="header.resumecv"></a>
-                <a href="./Roadmap.html" class="MenuNavLink" data-i18n="header.roadmap">Roadmap</a>
-                <a href="" class="MenuNavLink" data-i18n="header.projects">Projetos</a>
+                <a href="#start" class="MenuNavLink ActivePage" data-i18n="header.home"></a>
+                <a href="#experience" class="MenuNavLink" data-i18n="header.experience"></a>
+                <a href="#languages" class="MenuNavLink" data-i18n="header.languages"></a>
+                <a href="#education" class="MenuNavLink" data-i18n="header.education"></a>
+                <a href="#projects" class="MenuNavLink" data-i18n="header.projects"></a>
+                <a href="#contact" class="MenuNavLink" data-i18n="header.contact"></a>
             </nav>
 
             <div class="MenuLanguageButtons">
@@ -39,12 +43,76 @@
         </header>
 
         <main class="IndexMain">
-            <section class="AboutSection FadeUp">
+            <section id="start" class="AboutSection FadeUp">
                 <h1 class="AboutDevName" data-i18n="main.dev.name"></h1>
                 <p class="AboutDevDescription" data-i18n="main.dev.description"></p>
+
+                <div class="TechnologyContainer">
+
+                    <h2 class="TechSectionTitle" data-i18n="tech.interests.title"></h2>
+
+                    <div class="TechContainer">
+
+                        <div class="TechCard TechCardHtml">
+                            <i class="devicon-html5-plain colored"></i> <span data-i18n="tech.interests.html.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardCss">
+                            <i class="devicon-css3-plain colored"></i> <span data-i18n="tech.interests.css.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardJavascript">
+                            <i class="devicon-javascript-plain colored"></i> <span data-i18n="tech.interests.javascript.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardGit">
+                            <i class="devicon-git-plain colored"></i> <span data-i18n="tech.interests.git.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardGray">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" class="TechImage" />
+                            <span data-i18n="tech.interests.unity.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardGreen">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" class="TechImage" />
+                            <span data-i18n="tech.interests.nodejs.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardGold">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="TechImage" />
+                            <span data-i18n="tech.interests.python.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardPurple">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" class="TechImage" />
+                            <span data-i18n="tech.interests.csharp.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardGray">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg" class="TechImage" />
+                            <span data-i18n="tech.interests.unrealengine.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardGreen">
+                            <img src="images/QlikLogo.png" alt="" class="TechImageQlik"> <span data-i18n="tech.interests.qliksense.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardGreen">
+                            <img src="images/QlikLogo.png" alt="" class="TechImageQlik"> <span data-i18n="tech.interests.nprinting.title"></span>
+                        </div>
+
+                        <div class="TechCard TechCardGreen">
+                            <img src="images/QlikLogo.png" alt="" class="TechImageQlik"> <span data-i18n="tech.interests.qlikcloud.title"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+                
             </section>
 
-            <section class="ExperienceSection FadeUp">
+            <section id="experience" class="ExperienceSection FadeUp">
                 <h2 class="SectionTitle" data-i18n="main.experience.title"></h2>
 
                 <div class="SectionCard">
@@ -92,7 +160,7 @@
                 </div>
             </section>
 
-            <section class="LanguagesSection Reveal">
+            <section id="languages" class="LanguagesSection Reveal">
                 <h2 class="SectionTitle" data-i18n="main.languages.title"></h2>
 
                 <div class="SectionCard">
@@ -129,7 +197,7 @@
                 </div>
             </section>
 
-            <section class="EducationSection Reveal">
+            <section id="education" class="EducationSection Reveal">
                 <h2 class="SectionTitle" data-i18n="main.education.title"></h2>
 
                 <div class="SectionCard">
@@ -166,7 +234,11 @@
                 </div>
             </section>
 
-            <section class="ContactSection" Reveal>
+            <section id="projects" class="ProjectsSection Reveal">
+                <h2 class="SectionTitle" data-i18n="main.projects.title"></h2>
+            </section>
+
+            <section id="contact" class="ContactSection Reveal">
                 <h2 class="SectionTitle" data-i18n="main.contact.title"></h2>
 
                 <div class="ContactContainer">

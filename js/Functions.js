@@ -1,15 +1,16 @@
 const translations = {
     en: {
         "site.title": "Mateus Nogueira | Portfolio",
-        "header.resumecv": "Resume (CV)",
-        "header.roadmap": "Roadmap",
+        "header.home": "Home",
+        "header.experience": "Experience",
+        "header.languages": "Languages",
+        "header.education": "Education",
         "header.projects": "Projects",
+        "header.contact": "Contact",
         "main.dev.name": "Mateus Nogueira",
         "main.dev.description": 
-                            "Developer with experience in Business Intelligence and software development, interested in web applications, backend, APIs and game development." +
-                            "\n\nI'm a calm person, with an aptitude for learning new technologies and adapting to different contexts and work environments." +
-                            "\n\nRecently used: HTML, CSS, JavaScript, Git, Qlik Sense, QlikView, Qlik Cloud, NPrinting." + 
-                            "\n\nOther technologies: Delphi, Node.js, Firebird, SQL Server, MySQL, C#, Java, Unity, Unreal Engine, Microsoft Office, Python, PHP.",
+                            "Developer with experience in Business Intelligence and software development, interested in programming (primarily backend) and game development." +
+                            "\n\nI'm a calm person, with an aptitude for learning new technologies and adapting to different contexts and work environments.",
         "main.experience.title": "Experience",
         "main.experience.bilden.name": "Bilden Resultados com Inteligência",
         "main.experience.bilden.period": "June 2021 - August 2025",
@@ -45,19 +46,33 @@ const translations = {
         "main.education.highschool.description": "High School.",
         "main.contact.title": "Contact",
         "main.contact.dev.phone": "+55 47 9 9246-2691",
-        "roadmap.title": "Roadmap"
+        "main.projects.title": "Projects",
+        "tech.interests.title": "Interests",
+        "tech.interests.html.title": "HTML",
+        "tech.interests.css.title": "Css",
+        "tech.interests.javascript.title": "JavaScript",
+        "tech.interests.git.title": "Git",
+        "tech.interests.qliksense.title": "Qlik Sense",
+        "tech.interests.nprinting.title": "NPrinting",
+        "tech.interests.qlikcloud.title": "Qlik Cloud",
+        "tech.interests.unity.title": "Unity",
+        "tech.interests.unrealengine.title": "Unreal Engine",
+        "tech.interests.nodejs.title": "Node Js",
+        "tech.interests.csharp.title": "C#",
+        "tech.interests.python.title": "Python"
     },
     ptbr: {
         "site.title": "Mateus Nogueira | Portfólio",
-        "header.resumecv": "Currículo",
-        "header.roadmap": "Roadmap",
+        "header.home": "Home",
+        "header.experience": "Experiencia",
+        "header.languages": "Idiomas",
+        "header.education": "Formação",
         "header.projects": "Projetos",
+        "header.contact": "Contato",
         "main.dev.name": "Mateus Nogueira",
         "main.dev.description": 
-                            "Desenvolvedor com experiência em Business Intelligence e desenvolvimento de software, com interesse em aplicações web, backend, APIs e desenvolvimento de jogos." +
-                            "\n\nSou uma pessoa calma, com facilidade para aprender novas tecnologias e me adaptar a diferentes contextos e ambientes de trabalho." +
-                            "\n\nTecnologias usadas recentemente: HTML, CSS, JavaScript, Git, Qlik Sense, QlikView, Qlik Cloud, NPrinting." + 
-                            "\n\nOutras tecnologias: Delphi, Node.Js, Firebird, SQL Server, MySQL, C#, Java, Unity, Unreal Engine, Microsoft Office, Python, PHP.",
+                            "Desenvolvedor com experiência em Business Intelligence e desenvolvimento de software, com interesse em programação (principalmente backend) e desenvolvimento de jogos." +
+                            "\n\nSou uma pessoa calma, com facilidade para aprender novas tecnologias e me adaptar a diferentes contextos e ambientes de trabalho.",
         "main.experience.title": "Experiência",
         "main.experience.bilden.name": "Bilden Resultados com Inteligência",
         "main.experience.bilden.period": "Junho 2021 - Agosto 2025",
@@ -93,7 +108,20 @@ const translations = {
         "main.education.highschool.description": "Ensino médio.",
         "main.contact.title": "Contato",
         "main.contact.dev.phone": "+55 47 9 9246-2691",
-        "roadmap.title": "Roadmap"
+        "main.projects.title": "Projetos",
+        "tech.interests.title": "Interesses",
+        "tech.interests.html.title": "HTML",
+        "tech.interests.css.title": "Css",
+        "tech.interests.javascript.title": "JavaScript",
+        "tech.interests.git.title": "Git",
+        "tech.interests.qliksense.title": "Qlik Sense",
+        "tech.interests.nprinting.title": "NPrinting",
+        "tech.interests.qlikcloud.title": "Qlik Cloud",
+        "tech.interests.unity.title": "Unity",
+        "tech.interests.unrealengine.title": "Unreal Engine",
+        "tech.interests.nodejs.title": "Node Js",
+        "tech.interests.csharp.title": "C#",
+        "tech.interests.python.title": "Python"
     }
 };
 
@@ -101,7 +129,11 @@ function setLanguage(language) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[language] && translations[language][key]) {
-            element.textContent = translations[language][key];
+            if (element.tagName === "TITLE") {
+                document.title = translations[language][key];
+            } else {
+                element.textContent = translations[language][key];
+            }
         }
     });
     
@@ -120,7 +152,7 @@ function setLanguage(language) {
 
 }
 
-//On page load
+// Event On page load
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLang') || 'ptbr';
     setLanguage(savedLang);
@@ -189,3 +221,35 @@ document.addEventListener("mousemove", (event) => {
   document.documentElement.style.setProperty("--starsx", `${x}px`);
   document.documentElement.style.setProperty("--starsy", `${y}px`);
 });
+
+const sections = document.querySelectorAll("main section");
+const menuLinks = document.querySelectorAll(".MenuNavLink");
+
+function updateActiveMenuLink() {
+    let currentSection = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+
+        if (window.scrollY >= sectionTop - 180) {
+            currentSection = section.getAttribute("id");
+        }
+    });
+
+    const isBottomPage = window.innerHeight + window.scrollY >= document.body.offsetHeight - 5;
+
+    if (isBottomPage) {
+        currentSection = "contact";
+    }
+
+    menuLinks.forEach(link => {
+        link.classList.remove("ActivePage");
+
+        if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("ActivePage");
+        }
+    });
+}
+
+window.addEventListener("scroll", updateActiveMenuLink);
+window.addEventListener("DOMContentLoaded", updateActiveMenuLink);
