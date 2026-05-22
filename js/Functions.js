@@ -171,28 +171,21 @@ window.addEventListener("scroll", () => {
 
 });
 
-let copyTimeout;
+const copyTimeouts = {};
 
-function copyPhone() {
+function copyText(text, iconId) {
+    navigator.clipboard.writeText(text);
 
-    navigator.clipboard.writeText("+55 47 9 9246-2691");
-
-    const icon = document.getElementById("CopyPhoneIcon");
+    const icon = document.getElementById(iconId);
 
     icon.classList.remove("fa-copy");
-    icon.classList.add("fa-check");
+    icon.classList.add("fa-check", "CopySuccess");
 
-    icon.classList.add("CopySuccess");
+    clearTimeout(copyTimeouts[iconId]);
 
-    clearTimeout(copyTimeout);
-
-    copyTimeout = setTimeout(() => {
-
-        icon.classList.remove("fa-check");
+    copyTimeouts[iconId] = setTimeout(() => {
+        icon.classList.remove("fa-check", "CopySuccess");
         icon.classList.add("fa-copy");
-
-        icon.classList.remove("CopySuccess");
-
     }, 1200);
 }
 

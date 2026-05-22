@@ -236,20 +236,77 @@
 
             <section id="projects" class="ProjectsSection Reveal">
                 <h2 class="SectionTitle" data-i18n="main.projects.title"></h2>
+
+                <div class="ProjectsContainer">
+                    
+                    <a href="#" class="ProjectsCard">
+                        <div class="ProjectBlur"></div>
+
+                        <div class="ProjectContent">
+                            <h3 class="ProjectTitle"> Projeto 01 </h3>
+
+                            <p class="ProjectDescription"> Descrição projeto 01. Descrição projeto 01. Descrição projeto 01. </p>
+
+                            <div class="ProjectTags">
+                                <span>JavaScript</span>
+                                <span>API</span>
+                                <span>Backend</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="ProjectsCard">
+                        <div class="ProjectBlur"></div>
+
+                        <div class="ProjectContent">
+
+                            <h3 class="ProjectTitle"> Projeto 02 </h3>
+
+                            <p class="ProjectDescription"> Descrição projeto 02. Descrição projeto 02. Descrição projeto 02. </p>
+
+                            <div class="ProjectTags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>Game Dev</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </section>
 
             <section id="contact" class="ContactSection Reveal">
                 <h2 class="SectionTitle" data-i18n="main.contact.title"></h2>
 
                 <div class="ContactContainer">
-                    <div class="PhoneContainer">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    
+                    <div class="ContactCardContainer">
 
-                        <span class="PhoneText" data-i18n="main.contact.dev.phone"></span>
+                        <div class="ContactCard">
+                            <i class="fa-solid fa-envelope ContactIcon"></i>
 
-                        <button class="CopyButton" onclick="copyPhone()">
-                            <i class="fa-solid fa-copy fa-2xl" id="CopyPhoneIcon"></i>
-                        </button>
+                            <div class="ContactCardInfo">
+                                <span class="ContactTitle">Email</span>
+                                <span class="ContactText"> mnogueira030@gmail.com </span>
+                            </div>
+
+                            <button class="CopyButton" onclick="copyText('seuemail@email.com', 'CopyEmailIcon')">
+                                <i class="fa-solid fa-copy" id="CopyEmailIcon"></i>
+                            </button>
+                        </div>
+
+                        <div class="ContactCard">
+                            <i class="fa-solid fa-phone ContactIcon"></i>
+
+                            <div class="ContactCardInfo">
+                                <span class="ContactTitle">Telefone</span>
+                                <span class="ContactText">+55 47 9 9246-2691</span>
+                            </div>
+
+                            <button class="CopyButton" onclick="copyText('+55 47 9 9246-2691', 'CopyPhoneIcon')">
+                                <i class="fa-solid fa-copy" id="CopyPhoneIcon"></i>
+                            </button>
+                        </div>
+
                     </div>
 
                     <div class="SocialContainer">
