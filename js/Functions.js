@@ -47,7 +47,7 @@ const translations = {
         "main.contact.title": "Contact",
         "main.contact.dev.phone": "+55 47 9 9246-2691",
         "main.projects.title": "Projects",
-        "tech.interests.title": "Interests",
+        "tech.interests.title": "Interested in",
         "tech.interests.html.title": "HTML",
         "tech.interests.css.title": "Css",
         "tech.interests.javascript.title": "JavaScript",
@@ -152,7 +152,7 @@ function setLanguage(language) {
 
 }
 
-// Event On page load
+// On page load
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferredLang') || 'ptbr';
     setLanguage(savedLang);
