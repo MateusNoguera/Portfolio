@@ -9,8 +9,9 @@ const translations = {
         "header.contact": "Contact",
         "main.dev.name": "Mateus Nogueira",
         "main.dev.description": 
-                            "Developer with experience in Business Intelligence and software development, interested in programming (primarily backend) and game development." +
-                            "\n\nI'm a calm person, with an aptitude for learning new technologies and adapting to different contexts and work environments.",
+                            "Developer with experience in Business Intelligence and software development, interested in programming, primarily backend and game development." +
+                            "\n\nI'm a calm person, with an aptitude for learning new technologies and adapting to different situations." + 
+                            "\n\nExperience since 2018, working in different roles such as programmer, customer support and, more recently, Business Intelligence consulting.",
         "main.experience.title": "Experience",
         "main.experience.bilden.name": "Bilden Resultados com Inteligência",
         "main.experience.bilden.period": "June 2021 - August 2025",
@@ -71,8 +72,9 @@ const translations = {
         "header.contact": "Contato",
         "main.dev.name": "Mateus Nogueira",
         "main.dev.description": 
-                            "Desenvolvedor com experiência em Business Intelligence e desenvolvimento de software, com interesse em programação (principalmente backend) e desenvolvimento de jogos." +
-                            "\n\nSou uma pessoa calma, com facilidade para aprender novas tecnologias e me adaptar a diferentes contextos e ambientes de trabalho.",
+                            "Desenvolvedor com experiência em Business Intelligence e desenvolvimento de software, com interesse em programação, principalmente backend e desenvolvimento de jogos." +
+                            "\n\nSou uma pessoa calma, com facilidade para aprender novas tecnologias e me adaptar a diferentes situações." +
+                            "\n\nExperiência desde 2018, atuando em diferentes funções como programador, suporte ao cliente e, mais recentemente, consultoria em Business Intelligence.",
         "main.experience.title": "Experiência",
         "main.experience.bilden.name": "Bilden Resultados com Inteligência",
         "main.experience.bilden.period": "Junho 2021 - Agosto 2025",
