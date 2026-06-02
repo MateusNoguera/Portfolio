@@ -583,88 +583,11 @@ section {
     gap: 40px;
 }
 
-.ContactCardContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    width: min(100%, 1400px);
-}
-
-.ContactCard {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding: 26px 30px;
-    border-radius: 26px;
-    color: #fff;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
-    width: 100%;
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
-}
-
-.ContactCard:hover {
-    transform: translateY(-6px);
-    border-color: rgba(255,255,255,0.16);
-    background: rgba(255,255,255,0.08);
-    box-shadow: 0 0 22px rgba(255,255,255,0.08);
-}
-
 .ContactIcon {
     font-size: 42px;
     width: 50px;
     display: flex;
     justify-content: center;
-}
-
-.ContactCardInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 0;
-    flex: 1;
-}
-
-.ContactTitle {
-    font-size: 24px;
-    font-weight: bold;
-    opacity: 0.9;
-    margin-bottom: 4px;
-    line-height: 1;
-}
-
-.ContactText {
-    font-size: clamp(22px, 2vw, 28px);
-    font-weight: bold;
-    line-height: 1.2;
-}
-
-.CopyButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 42px;
-    color: #fff;
-    background: transparent;
-    cursor: pointer;
-    font-size: 32px;
-    transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
-}
-
-.CopyButton:hover {
-    transform: scale(1.2);
-}
-
-.CopySuccess {
-    color: #4ade80;
-    animation: copyPop 0.35s ease;
 }
 
 @keyframes copyPop {
@@ -833,33 +756,14 @@ section {
         text-align: center;
     }
 
-    .ContactCardContainer {
-        flex-direction: column;
-        width: min(100%, 900px);
-    }
-
     .SocialButton {
         width: 80px;
         height: 80px;
     }
 
-    .ContactCard {
-        gap: 14px;
-        padding: 22px 20px;
-    }
-
     .ContactIcon {
         font-size: 32px;
         min-width: 36px;
-    }
-
-    .ContactTitle {
-        font-size: 22px;
-    }
-
-    .ContactText {
-        font-size: 20px;
-        word-break: break-word;
     }
 
     .CopyButton {
