@@ -8,6 +8,7 @@ const translations = {
         "header.projects": "Projects",
         "header.contact": "Contact",
         "main.dev.name": "Mateus Nogueira",
+        "footer.copyright": "© 2026 - All rights reserved",
         "main.dev.description": 
                             "Developer with experience in Business Intelligence and software development, interested in programming, primarily backend and game development." +
                             "\n\nI'm a calm person, with an aptitude for learning new technologies and adapting to different situations." + 
@@ -46,7 +47,6 @@ const translations = {
         "main.education.highschool.period": "2014 - 2016.",
         "main.education.highschool.description": "High School.",
         "main.contact.title": "Contact",
-        "main.contact.dev.phone": "+55 47 9 9246-2691",
         "main.projects.title": "Projects",
         "tech.interests.title": "Interested in",
         "tech.interests.html.title": "HTML",
@@ -71,6 +71,7 @@ const translations = {
         "header.projects": "Projetos",
         "header.contact": "Contato",
         "main.dev.name": "Mateus Nogueira",
+        "footer.copyright": "© 2026 - Todos os direitos reservados",
         "main.dev.description": 
                             "Desenvolvedor com experiência em Business Intelligence e desenvolvimento de software, com interesse em programação, principalmente backend e desenvolvimento de jogos." +
                             "\n\nSou uma pessoa calma, com facilidade para aprender novas tecnologias e me adaptar a diferentes situações." +
@@ -109,7 +110,6 @@ const translations = {
         "main.education.highschool.period": "2014 - 2016.",
         "main.education.highschool.description": "Ensino médio.",
         "main.contact.title": "Contato",
-        "main.contact.dev.phone": "+55 47 9 9246-2691",
         "main.projects.title": "Projetos",
         "tech.interests.title": "Interesses",
         "tech.interests.html.title": "HTML",
@@ -172,24 +172,6 @@ window.addEventListener("scroll", () => {
   }
 
 });
-
-const copyTimeouts = {};
-
-function copyText(text, iconId) {
-    navigator.clipboard.writeText(text);
-
-    const icon = document.getElementById(iconId);
-
-    icon.classList.remove("fa-copy");
-    icon.classList.add("fa-check", "CopySuccess");
-
-    clearTimeout(copyTimeouts[iconId]);
-
-    copyTimeouts[iconId] = setTimeout(() => {
-        icon.classList.remove("fa-check", "CopySuccess");
-        icon.classList.add("fa-copy");
-    }, 1200);
-}
 
 const reveals = document.querySelectorAll(".Reveal");
 
