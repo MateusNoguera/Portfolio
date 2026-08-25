@@ -5,11 +5,13 @@ const translations = {
         "header.home": "Início",
         "header.experience": "Experiência",
         "header.languages": "Idiomas",
+        "header.education": "Formação",
         "header.projects": "Projetos",
         "header.contact": "Contato",
 
         "sections.experience": "Experiência",
         "sections.languages": "Idiomas",
+        "sections.education": "Formação",
         "sections.projects": "Projetos",
         "sections.contact": "Contato",
 
@@ -41,7 +43,19 @@ const translations = {
         "languages.english.description": "Estudo e uso inglês há mais de 15 anos.",
         "languages.japanese.name": "Japonês",
         "languages.japanese.level": "Iniciante",
-        "languages.japanese.description": "Após ouvir músicas japonesas por alguns meses, comecei a estudar o idioma como hobby."
+        "languages.japanese.description": "Após ouvir músicas japonesas por alguns meses, comecei a estudar o idioma como hobby.",
+
+        "education.senai.name": "SENAI/SC - Serviço Nacional de Aprendizagem Industrial",
+        "education.bachelor.description": "Curso Superior de Tecnologia (CST), Tecnólogo em Sistemas para Internet.",
+        "education.bachelor.period": "2016 - 2019.",
+        "education.ittechnician.description": "Técnico em Informática.",
+        "education.ittechnician.period": "2015 - 2016",
+        "education.highschool.description": "Ensino médio.",
+        "education.highschool.period": "2014 - 2016.",
+
+        "contact.description": "Abaixo estão dois endereços de email, além dos meus perfis no LinkedIn e GitHub.",
+
+        "footer.rights": "© 2026 - Todos os direitos reservados."
     },
 
     en: {
@@ -50,11 +64,13 @@ const translations = {
         "header.home": "Home",
         "header.experience": "Experience",
         "header.languages": "Languages",
+        "header.education": "Education",
         "header.projects": "Projects",
         "header.contact": "Contact",
 
         "sections.experience": "Experience",
         "sections.languages": "Languages",
+        "sections.education": "Education",
         "sections.projects": "Projects",
         "sections.contact": "Contact",
         
@@ -86,7 +102,19 @@ const translations = {
         "languages.english.description": "I've been learning and using English for over 15 years.",
         "languages.japanese.name": "Japanese",
         "languages.japanese.level": "Beginner",
-        "languages.japanese.description": "After listening to japanese music for a few months, I started studying the language as a hobby."
+        "languages.japanese.description": "After listening to japanese music for a few months, I started studying the language as a hobby.",
+
+        "education.senai.name": "SENAI/SC - Serviço Nacional de Aprendizagem Industrial",
+        "education.bachelor.description": "Bachelor of Technology - BTech, Internet Systems",
+        "education.bachelor.period": "2016 - 2019.",
+        "education.ittechnician.description": "IT Technician.",
+        "education.ittechnician.period": "2015 - 2016",
+        "education.highschool.description": "High School.",
+        "education.highschool.period": "2014 - 2016.",
+
+        "contact.description": "Below are two email addresses, along with my LinkedIn and GitHub profiles.",
+
+        "footer.rights": "© 2026 - All rights reserved."
     }
 };
 
@@ -110,6 +138,17 @@ function setLanguage(language) {
         } else {
             element.textContent = translatedText;
         }
+    });
+
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+        const key = element.dataset.i18nAriaLabel;
+        const translatedText = selectedTranslation[key];
+
+        if (!translatedText) {
+            return;
+        }
+
+        element.setAttribute("aria-label", translatedText);
     });
 
     document.documentElement.lang = language === "ptbr" ? "pt-BR" : "en";
@@ -140,18 +179,18 @@ function setTheme(theme) {
 }
 
 document.querySelectorAll(".LanguageButton")
-        .forEach((button) => {
-            button.addEventListener("click", () => {
-                setLanguage(button.dataset.language);
-            });
+    .forEach((button) => {
+        button.addEventListener("click", () => {
+            setLanguage(button.dataset.language);
         });
+    });
 
 document.querySelectorAll(".ThemeButton")
-        .forEach((button) => {
-            button.addEventListener("click", () => {
-                setTheme(button.dataset.theme);
-            });
+    .forEach((button) => {
+        button.addEventListener("click", () => {
+            setTheme(button.dataset.theme);
         });
+    });
 
 document.addEventListener("DOMContentLoaded", () => {
     const savedLanguage = localStorage.getItem("preferredLanguage") || "ptbr";
@@ -159,4 +198,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setLanguage(savedLanguage);
     setTheme(savedTheme);
+});
+
+document.querySelectorAll(".CopyButton").forEach((button) => {
+    button.addEventListener("click", async () => {
+        const emailCard = button.closest(".EmailCard");
+        const email = emailCard.querySelector(".EmailAddress").textContent.trim();
+        const originalContent = button.innerHTML;
+
+        try {
+            await navigator.clipboard.writeText(email);
+
+            button.classList.add("IsCopied");
+
+            button.innerHTML = `
+                <svg
+                    class="CopyIcon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M5 12.5l4 4L19 7"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    ></path>
+                </svg>
+            `;
+
+            setTimeout(() => {
+                button.classList.remove("IsCopied");
+                button.innerHTML = originalContent;
+            }, 1500);
+        } catch (error) {
+            console.error("Could not copy email:", error);
+        }
+    });
 });

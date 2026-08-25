@@ -6,6 +6,7 @@
     --text: #f4f6ff;
 
     --accent: #59c7ff;
+    --social-accent: #3b82a0;
 
     --border: rgba(255, 255, 255, 0.1);
     --card-background: rgba(255, 255, 255, 0.05);
@@ -362,6 +363,251 @@ section {
     overflow-wrap: break-word;
 }
 
+.EducationCard {
+    display: grid;
+    grid-template-columns: minmax(420px, 520px) 1px 1fr;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.EducationPrimary {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.EducationLogo {
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+}
+
+.EducationInfo {
+    min-width: 0;
+    color: var(--text);
+    text-align: left;
+}
+
+.EducationInfo h3 {
+    margin-bottom: 4px;
+    font-size: clamp(20px, 2vw, 25px);
+    font-weight: 700;
+}
+
+.EducationDivider {
+    width: 1px;
+    height: 100%;
+    min-height: 110px;
+    background: var(--border);
+}
+
+.EducationDetails {
+    min-width: 0;
+    color: var(--text);
+    text-align: center;
+}
+
+.EducationDescription {
+    min-width: 0;
+    color: var(--text);
+    font-size: clamp(18px, 1.6vw, 22px);
+    line-height: 1.6;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+}
+
+.EducationPeriod {
+    margin-top: 6px;
+    color: var(--text);
+    font-size: clamp(16px, 1.6vw, 20px);
+    text-align: center;
+    font-weight: 700;
+}
+
+.ContactDescription {
+    max-width: 800px;
+    margin: 30px auto 0;
+    color: var(--text);
+    font-size: clamp(17px, 1.6vw, 21px);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.ContactEmails {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 500px));
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.EmailCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 76px;
+    padding: 16px 20px;
+    background: var(--card-background);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.EmailAddress {
+    min-width: 0;
+    color: var(--text);
+    font-size: clamp(16px, 1.4vw, 19px);
+    overflow-wrap: anywhere;
+}
+
+.CopyButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.CopyButton:hover {
+    color: var(--background);
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.CopyIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.SocialLinks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 260px));
+    justify-content: center;
+    gap: 24px;
+    margin-top: 50px;
+}
+
+.SocialCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 150px;
+    padding: 24px;
+    color: var(--text);
+    background: var(--card-background);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    text-decoration: none;
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.SocialCard:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.SocialCard p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.SocialIconCircle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    color: #2b2b2b;
+    background: var(--text);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.SocialIconCircle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    transition: height 0.35s ease;
+}
+
+.SocialIcon {
+    position: relative;
+    z-index: 1;
+    width: 42px;
+    height: 42px;
+}
+
+.SocialCard:hover .SocialIconCircle::before {
+    height: 100%;
+}
+
+.LinkedInCard .SocialIconCircle::before {
+    background: #0a66c2;
+}
+
+.GitHubCard .SocialIconCircle::before {
+    background: #181717;
+}
+
+.LinkedInCard:hover .SocialIconCircle,
+.GitHubCard:hover .SocialIconCircle {
+    color: #ffffff;
+}
+
+.CopyButton.IsCopied {
+    color: #ffffff;
+    background: #2e9d63;
+    border-color: #2e9d63;
+}
+
+.Footer {
+    width: 100%;
+    padding: 24px 20px;
+    color: var(--text);
+    background: var(--header-background);
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.FooterDevName {
+    font-size: clamp(18px, 1.5vw, 22px);
+    font-weight: 700;
+}
+
+.Footer p {
+    margin-top: 6px;
+    font-size: clamp(14px, 1.2vw, 16px);
+    opacity: 0.75;
+}
+
 @media (max-width: 900px) {
     #home {
         padding-top: 40px;
@@ -394,14 +640,34 @@ section {
     }
 
     .ExperienceCard,
-    .LanguageCard {
+    .LanguageCard,
+    .EducationCard {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
     .ExperiencePrimary,
-    .LanguagePrimary {
+    .LanguagePrimary,
+    .EducationPrimary {
         justify-content: center;
+    }
+
+    .ExperienceInfo,
+    .LanguageInfo,
+    .EducationInfo {
+        text-align: center;
+    }
+
+    .ExperienceDivider,
+    .LanguageDivider,
+    .EducationDivider {
+        display: none;
+    }
+
+    .ExperienceDescription,
+    .LanguageDescription,
+    .EducationDescription {
+        text-align: center;
     }
 
     .ExperienceLogo {
@@ -414,19 +680,17 @@ section {
         height: 60px;
     }
 
-    .ExperienceInfo,
-    .LanguageInfo {
-        text-align: center;
+    .EducationLogo {
+        width: 90px;
+        height: 90px;
     }
 
-    .ExperienceDivider,
-    .LanguageDivider {
-        display: none;
+    .ContactEmails {
+        grid-template-columns: 1fr;
     }
 
-    .ExperienceDescription,
-    .LanguageDescription {
-        text-align: center;
+    .SocialLinks {
+        grid-template-columns: repeat(2, minmax(140px, 220px));
     }
 }
 
@@ -454,7 +718,8 @@ section {
     }
 
     .ExperiencePrimary,
-    .LanguagePrimary {
+    .LanguagePrimary,
+    .EducationPrimary {
         gap: 16px;
     }
 
@@ -466,5 +731,38 @@ section {
     .LanguageFlag {
         width: 70px;
         height: 47px;
+    }
+
+    .EducationLogo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .EmailCard {
+        padding: 14px 16px;
+    }
+
+    .EmailAddress {
+        font-size: 16px;
+    }
+
+    .SocialLinks {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        gap: 16px;
+    }
+
+    .SocialCard {
+        min-height: 130px;
+        padding: 18px;
+    }
+
+    .SocialIconCircle {
+        width: 64px;
+        height: 64px;
+    }
+
+    .SocialIcon {
+        width: 36px;
+        height: 36px;
     }
 }
