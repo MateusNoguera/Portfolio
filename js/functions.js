@@ -9,16 +9,14 @@ const translations = {
 
         "hero.role": "Desenvolvedor de Software",
 
-        "hero.description":
-            "Desenvolvedor com experiência em Business Intelligence e desenvolvimento de software, com interesse em backend, desenvolvimento web e desenvolvimento de jogos.",
+        "hero.description": "Desenvolvedor com experiência em Business Intelligence e desenvolvimento de software, com interesse em backend, desenvolvimento web e desenvolvimento de jogos.",
 
         "hero.projects": "Ver projetos",
         "hero.contact": "Contato",
 
         "sections.about": "Sobre",
 
-        "about.description":
-            "Trabalho com desenvolvimento de software desde 2018, passando por diferentes áreas como desenvolvimento, suporte ao cliente e Business Intelligence. Gosto de aprender novas tecnologias e me adaptar a diferentes ambientes."
+        "about.description": "Trabalho com desenvolvimento de software desde 2018, passando por diferentes áreas como desenvolvimento, suporte ao cliente e Business Intelligence. Gosto de aprender novas tecnologias e me adaptar a diferentes ambientes."
     },
 
     en: {
@@ -31,16 +29,14 @@ const translations = {
 
         "hero.role": "Software Developer",
 
-        "hero.description":
-            "Software developer with experience in Business Intelligence and software development, with an interest in backend, web development and game development.",
+        "hero.description": "Software developer with experience in Business Intelligence and software development, with an interest in backend, web development and game development.",
 
         "hero.projects": "View projects",
         "hero.contact": "Contact",
 
         "sections.about": "About",
 
-        "about.description":
-            "I've worked with software development since 2018, across development, customer support and Business Intelligence. I enjoy learning new technologies and adapting to different environments."
+        "about.description": "I've worked with software development since 2018, across development, customer support and Business Intelligence. I enjoy learning new technologies and adapting to different environments."
     }
 };
 
