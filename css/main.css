@@ -1,34 +1,33 @@
 :root {
-    --background: #0c1024;
-    --background-secondary: #141a35;
-    --header-background: rgba(9, 13, 31, 0.88);
+    --background: #101827;
+    --header-background: rgba(16, 24, 39, 0.9);
 
-    --text: #f4f6ff;
+    --surface: #182235;
+    --surface-hover: #1e2a40;
 
-    --accent: #59c7ff;
-    --social-accent: #3b82a0;
+    --text: #f1f4f8;
+    --text-secondary: #a8b4c8;
+
+    --accent: #57c5f8;
 
     --border: rgba(255, 255, 255, 0.1);
-    --card-background: rgba(255, 255, 255, 0.05);
-    --social-circle-background: var(--text);
-    --social-icon-color: #2b2b2b;
-    --social-circle-border: rgba(255, 255, 255, 0.85);
+    --control-background: rgba(255, 255, 255, 0.04);
 }
 
 :root[data-theme="light"] {
-    --background: #eef3fb;
-    --background-secondary: #ffffff;
-    --header-background: rgba(255, 255, 255, 0.9);
+    --background: #f2f5f9;
+    --header-background: rgba(242, 245, 249, 0.9);
 
-    --text: #172038;
+    --surface: #ffffff;
+    --surface-hover: #e9eef5;
 
-    --accent: #087fcb;
+    --text: #172033;
+    --text-secondary: #5f6d82;
 
-    --border: rgba(20, 31, 55, 0.28);
-    --card-background: rgba(255, 255, 255, 0.72);
-    --social-circle-background: #4b5563;
-    --social-icon-color: #ffffff;
-    --social-circle-border: rgba(20, 31, 55, 0.35);
+    --accent: #168bd0;
+
+    --border: rgba(23, 32, 51, 0.12);
+    --control-background: rgba(23, 32, 51, 0.04);
 }
 
 * {
@@ -44,12 +43,7 @@ html {
 body {
     min-height: 100vh;
     color: var(--text);
-    background:
-        radial-gradient(
-            circle at top,
-            var(--background-secondary),
-            var(--background) 55%
-        );
+    background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
     transition:
         color 0.3s ease,
@@ -61,87 +55,95 @@ body {
     top: 0;
     left: 0;
     z-index: 10;
+
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+
     width: 100%;
-    min-height: 76px;
-    padding: 12px 32px;
+    min-height: 72px;
+    padding: 0 32px;
+
     background: var(--header-background);
     border-bottom: 1px solid var(--border);
+
     backdrop-filter: blur(14px);
 }
 
+.Logo {
+    justify-self: start;
+
+    color: var(--text);
+
+    font-size: 22px;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
 .HeaderNav {
-    grid-column: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+
+    gap: 32px;
 }
 
 .HeaderNav a {
-    position: relative;
-    color: var(--text);
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 600;
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-}
+    color: var(--text-secondary);
 
-.HeaderNav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -7px;
-    width: 100%;
-    height: 2px;
-    background: var(--accent);
-    border-radius: 999px;
-    transform: scaleX(0);
-    transition: transform 0.2s ease;
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
 .HeaderNav a:hover {
     color: var(--accent);
-    transform: translateY(-2px);
-}
-
-.HeaderNav a:hover::after {
-    transform: scaleX(1);
 }
 
 .HeaderControls {
-    grid-column: 3;
     justify-self: end;
+
     display: flex;
     align-items: center;
-    gap: 16px;
+
+    gap: 14px;
 }
 
 .ControlGroup {
     display: flex;
     align-items: center;
-    gap: 8px;
+
     padding: 5px;
-    background: var(--card-background);
+
+    background: var(--control-background);
     border: 1px solid var(--border);
     border-radius: 999px;
 }
 
 .ControlButton {
-    min-width: 38px;
-    height: 38px;
-    padding: 0 10px;
-    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 42px;
+    height: 42px;
+    padding: 0 12px;
+
+    color: var(--text-secondary);
     background: transparent;
+
     border: none;
     border-radius: 999px;
+
     font-size: 14px;
     font-weight: 700;
+
     cursor: pointer;
+
     transition:
         color 0.2s ease,
         background-color 0.2s ease,
@@ -149,706 +151,245 @@ body {
 }
 
 .ControlButton:hover {
-    color: var(--background);
-    background: var(--accent);
-    transform: scale(1.06);
+    color: var(--accent);
+    background: rgba(87, 197, 248, 0.1);
 }
 
 .ControlButton.IsActive {
-    color: var(--background);
+    color: #07131c;
     background: var(--accent);
+}
+
+.ControlButton.IsActive:hover {
+    color: #07131c;
+    background: var(--accent);
+
+    transform: scale(1.04);
 }
 
 main {
-    padding-top: 76px;
+    padding-top: 72px;
 }
 
-section {
-    scroll-margin-top: 100px;
-}
-
-#home {
+.HeroSection {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
+    justify-content: center;
 
-.AboutMeContent {
-    width: 100%;
+    width: min(100% - 48px, 1100px);
+    min-height: 82vh;
+
     margin: 0 auto;
-    text-align: center;
 }
 
-.DevName {
-    margin-bottom: 24px;
-    color: var(--text);
-    font-size: clamp(26px, 4vw, 36px);
+.HeroRole {
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+    font-size: clamp(16px, 1.5vw, 18px);
     font-weight: 700;
-    line-height: 1.1;
-    text-align: center;
 }
 
-.HomeDescription {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+.HeroSection h1 {
     color: var(--text);
-    font-size: clamp(18px, 2vw, 24px);
+
+    font-size: clamp(48px, 7vw, 86px);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.HeroDescription {
+    max-width: 720px;
+
+    margin-top: 30px;
+
+    color: var(--text-secondary);
+
+    font-size: clamp(18px, 2vw, 22px);
     line-height: 1.7;
-    white-space: pre-line;
-    text-align: center;
 }
 
-.ContentSection {
-    width: min(100% - 80px, 1500px);
-    min-height: 70vh;
-    margin: 0 auto;
-    padding: 100px 0;
-}
-
-.ContentSection h2 {
-    font-size: clamp(26px, 4vw, 36px);
-    text-align: center;
-}
-
-.Technologies {
-    width: 100%;
-    margin-top: 50px;
-}
-
-.TechnologiesDescription {
-    max-width: 850px;
-    margin: 0 auto 30px;
-    color: var(--text);
-    font-size: clamp(17px, 2vw, 21px);
-    line-height: 1.6;
-    text-align: center;
-}
-
-.TechnologiesContainer {
+.HeroActions {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
     gap: 14px;
+
+    margin-top: 34px;
 }
 
-.TechnologyCard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 130px;
-    min-height: 54px;
-    padding: 12px 22px;
-    color: var(--text);
-    background: var(--card-background);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    font-size: 16px;
-    font-weight: 600;
+.PrimaryButton,
+.SecondaryButton {
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
     transition:
         border-color 0.2s ease,
         background-color 0.2s ease,
         transform 0.2s ease;
 }
 
-.TechnologyCard:hover {
-    border-color: var(--accent);
+.PrimaryButton {
+    color: #07131c;
+    background: var(--accent);
+}
+
+.SecondaryButton {
+    color: var(--text);
+
+    background: transparent;
+    border: 1px solid var(--border);
+}
+
+.PrimaryButton:hover,
+.SecondaryButton:hover {
     transform: translateY(-3px);
 }
 
-.ExperienceCard {
-    display: grid;
-    grid-template-columns: minmax(420px, 520px) 1px 1fr;
-    align-items: center;
-    gap: 28px;
-    width: 100%;
-    margin-top: 70px;
-}
-
-.ExperiencePrimary {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.ExperienceLogo {
-    flex-shrink: 0;
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-}
-
-.ExperienceInfo {
-    min-width: 0;
-    color: var(--text);
-    text-align: left;
-}
-
-.ExperienceInfo h3 {
-    margin-bottom: 4px;
-    font-size: clamp(20px, 2vw, 25px);
-    font-weight: 700;
-}
-
-.ExperienceInfo p {
-    font-size: clamp(16px, 1.6vw, 20px);
-}
-
-.ExperienceDivider {
-    width: 1px;
-    height: 100%;
-    min-height: 110px;
-    background: var(--border);
-}
-
-.ExperienceDescription {
-    min-width: 0;
-    color: var(--text);
-    font-size: clamp(18px, 1.6vw, 22px);
-    line-height: 1.6;
-    text-align: center;
-    white-space: pre-line;
-    overflow-wrap: break-word;
-}
-
-.LanguageCard {
-    display: grid;
-    grid-template-columns: minmax(420px, 520px) 1px 1fr;
-    align-items: center;
-    gap: 28px;
-    width: 100%;
-    margin-top: 70px;
-}
-
-.LanguagePrimary {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.LanguageFlag {
-    flex-shrink: 0;
-    width: 110px;
-    height: 75px;
-    object-fit: cover;
-}
-
-.LanguageInfo {
-    min-width: 0;
-    color: var(--text);
-    text-align: left;
-}
-
-.LanguageInfo h3 {
-    margin-bottom: 4px;
-    font-size: clamp(20px, 2vw, 25px);
-    font-weight: 700;
-}
-
-.LanguageInfo p {
-    font-size: clamp(16px, 1.6vw, 20px);
-}
-
-.LanguageDivider {
-    width: 1px;
-    height: 100%;
-    min-height: 90px;
-    background: var(--border);
-}
-
-.LanguageDescription {
-    min-width: 0;
-    color: var(--text);
-    font-size: clamp(18px, 1.6vw, 22px);
-    line-height: 1.6;
-    text-align: center;
-    white-space: pre-line;
-    overflow-wrap: break-word;
-}
-
-.EducationCard {
-    display: grid;
-    grid-template-columns: minmax(420px, 520px) 1px 1fr;
-    align-items: center;
-    gap: 28px;
-    width: 100%;
-    margin-top: 70px;
-}
-
-.EducationPrimary {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.EducationLogo {
-    flex-shrink: 0;
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-}
-
-.EducationInfo {
-    min-width: 0;
-    color: var(--text);
-    text-align: left;
-}
-
-.EducationInfo h3 {
-    margin-bottom: 4px;
-    font-size: clamp(20px, 2vw, 25px);
-    font-weight: 700;
-}
-
-.EducationDivider {
-    width: 1px;
-    height: 100%;
-    min-height: 110px;
-    background: var(--border);
-}
-
-.EducationDetails {
-    min-width: 0;
-    color: var(--text);
-    text-align: center;
-}
-
-.EducationDescription {
-    min-width: 0;
-    color: var(--text);
-    font-size: clamp(18px, 1.6vw, 22px);
-    line-height: 1.6;
-    text-align: center;
-    white-space: pre-line;
-    overflow-wrap: break-word;
-}
-
-.EducationPeriod {
-    margin-top: 6px;
-    color: var(--text);
-    font-size: clamp(16px, 1.6vw, 20px);
-    text-align: center;
-    font-weight: 700;
-}
-
-.ContactDescription {
-    max-width: 800px;
-    margin: 30px auto 0;
-    color: var(--text);
-    font-size: clamp(17px, 1.6vw, 21px);
-    line-height: 1.6;
-    text-align: center;
-}
-
-.ContactEmails {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 500px));
-    justify-content: center;
-    gap: 24px;
-    margin-top: 40px;
-}
-
-.EmailCard {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    min-height: 76px;
-    padding: 16px 20px;
-    background: var(--card-background);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-}
-
-.EmailAddress {
-    min-width: 0;
-    color: var(--text);
-    font-size: clamp(16px, 1.4vw, 19px);
-    overflow-wrap: anywhere;
-}
-
-.CopyButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 42px;
-    height: 42px;
-    padding: 0;
-    color: var(--text);
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    cursor: pointer;
-    transition:
-        color 0.2s ease,
-        background-color 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
-}
-
-.CopyButton:hover {
-    color: var(--background);
-    background: var(--accent);
+.SecondaryButton:hover {
     border-color: var(--accent);
-    transform: translateY(-2px);
 }
 
-.CopyIcon {
-    width: 20px;
-    height: 20px;
+.ContentSection {
+    width: min(100% - 48px, 1100px);
+
+    margin: 0 auto;
+    padding: 100px 0;
+
+    scroll-margin-top: 90px;
 }
 
-.SocialLinks {
+.SectionTitle {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 50px;
+}
+
+.SectionTitle span {
+    color: var(--accent);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.SectionTitle h2 {
+    color: var(--text);
+
+    font-size: clamp(30px, 4vw, 42px);
+}
+
+.AboutContent {
     display: grid;
-    grid-template-columns: repeat(2, minmax(180px, 260px));
-    justify-content: center;
-    gap: 24px;
-    margin-top: 50px;
+    grid-template-columns: 1.3fr 1fr;
+
+    gap: 80px;
 }
 
-.SocialCard {
+.AboutDescription {
+    color: var(--text-secondary);
+
+    font-size: clamp(17px, 1.7vw, 20px);
+    line-height: 1.8;
+}
+
+.Technologies {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    min-height: 150px;
-    padding: 24px;
-    color: var(--text);
-    background: var(--card-background);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    text-decoration: none;
-    transition:
-        border-color 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.SocialCard:hover {
-    border-color: var(--accent);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.SocialCard p {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.SocialIconCircle {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 72px;
-    height: 72px;
-    color: var(--social-icon-color);
-    background: var(--social-circle-background);
-    border: 2px solid rgba(255, 255, 255, 0.85);
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.SocialIconCircle::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0;
-    transition: height 0.35s ease;
-}
-
-.SocialIcon {
-    position: relative;
-    z-index: 1;
-    width: 42px;
-    height: 42px;
-}
-
-.SocialCard:hover .SocialIconCircle::before {
-    height: 100%;
-}
-
-.LinkedInCard .SocialIconCircle::before {
-    background: #0a66c2;
-}
-
-.GitHubCard .SocialIconCircle::before {
-    background: #181717;
-}
-
-.LinkedInCard:hover .SocialIconCircle,
-.GitHubCard:hover .SocialIconCircle {
-    color: #ffffff;
-}
-
-.CopyButton.IsCopied {
-    color: #ffffff;
-    background: #2e9d63;
-    border-color: #2e9d63;
-}
-
-.Footer {
-    width: 100%;
-    padding: 24px 20px;
-    color: var(--text);
-    background: var(--header-background);
-    border-top: 1px solid var(--border);
-    text-align: center;
-}
-
-.FooterDevName {
-    font-size: clamp(18px, 1.5vw, 22px);
-    font-weight: 700;
-}
-
-.Footer p {
-    margin-top: 6px;
-    font-size: clamp(14px, 1.2vw, 16px);
-    opacity: 0.75;
-}
-
-.ProjectsContainer {
-    display: flex;
-    justify-content: center;
+    align-content: flex-start;
     flex-wrap: wrap;
-    gap: 32px;
-    margin-top: 70px;
-}
 
-.ProjectCard {
-    display: flex;
-    flex-direction: column;
-    flex: 0 1 700px;
-    min-height: 280px;
-    padding: 32px;
-    color: var(--text);
-    background: var(--card-background);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    text-decoration: none;
-    transition:
-        border-color 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.ProjectCard:hover {
-    border-color: var(--accent);
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.ProjectCard h3 {
-    margin-bottom: 24px;
-    font-size: clamp(22px, 2vw, 28px);
-    font-weight: 700;
-}
-
-.ProjectDescription {
-    color: var(--text);
-    font-size: clamp(17px, 1.5vw, 20px);
-    line-height: 1.6;
-    white-space: pre-line;
-}
-
-.ProjectTags {
-    display: flex;
-    flex-wrap: wrap;
     gap: 10px;
-    margin-top: auto;
-    padding-top: 18px;
 }
 
-.ProjectTag {
-    padding: 8px 14px;
-    color: var(--text);
-    background: var(--card-background);
+.Technologies span {
+    padding: 8px 13px;
+
+    color: var(--text-secondary);
+    background: var(--surface);
+
     border: 1px solid var(--border);
     border-radius: 999px;
+
     font-size: 14px;
     font-weight: 600;
 }
 
-#projects {
-    min-height: auto;
-    padding-bottom: 60px;
-}
-
-#contact {
-    padding-top: 60px;
-}
-
 @media (max-width: 900px) {
-    #home {
-        padding-top: 40px;
-        padding-bottom: 50px;
-    }
-
     .Header {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 16px 20px;
+        grid-template-columns: 1fr auto;
+
+        padding: 12px 20px;
     }
 
     .HeaderNav {
-        grid-column: 1;
-        flex-wrap: wrap;
-        gap: 18px 24px;
-    }
-
-    .HeaderControls {
-        grid-column: 1;
-        justify-self: center;
-    }
-
-    main {
-        padding-top: 120px;
-    }
-
-    section {
-        scroll-margin-top: 155px;
-    }
-
-    .ExperienceCard,
-    .LanguageCard,
-    .EducationCard {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .ExperiencePrimary,
-    .LanguagePrimary,
-    .EducationPrimary {
-        justify-content: center;
-    }
-
-    .ExperienceInfo,
-    .LanguageInfo,
-    .EducationInfo {
-        text-align: center;
-    }
-
-    .ExperienceDivider,
-    .LanguageDivider,
-    .EducationDivider {
         display: none;
     }
 
-    .ExperienceDescription,
-    .LanguageDescription,
-    .EducationDescription {
-        text-align: center;
+    .HeaderControls {
+        grid-column: 2;
     }
 
-    .ExperienceLogo {
-        width: 90px;
-        height: 90px;
+    .HeroSection {
+        min-height: 75vh;
     }
 
-    .LanguageFlag {
-        width: 90px;
-        height: 60px;
-    }
-
-    .EducationLogo {
-        width: 90px;
-        height: 90px;
-    }
-
-    .ProjectCard {
-        flex-basis: 100%;
-    }
-
-    .ContactEmails {
+    .AboutContent {
         grid-template-columns: 1fr;
-    }
 
-    .SocialLinks {
-        grid-template-columns: repeat(2, minmax(140px, 220px));
+        gap: 40px;
     }
 }
 
 @media (max-width: 560px) {
-    #home {
-        padding-top: 30px;
-        padding-bottom: 40px;
+    .Header {
+        padding: 12px 16px;
     }
 
-    .HeaderNav {
-        gap: 14px 18px;
-    }
-
-    .HeaderNav a {
-        font-size: 15px;
+    .Logo {
+        font-size: 20px;
     }
 
     .HeaderControls {
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 8px;
     }
 
-    main {
-        padding-top: 170px;
+    .ControlButton {
+        min-width: 38px;
+        height: 38px;
+        padding: 0 10px;
     }
 
-    .ExperiencePrimary,
-    .LanguagePrimary,
-    .EducationPrimary {
-        gap: 16px;
+    .HeroSection,
+    .ContentSection {
+        width: min(100% - 32px, 1100px);
     }
 
-    .ExperienceLogo {
-        width: 70px;
-        height: 70px;
+    .HeroSection {
+        min-height: 72vh;
     }
 
-    .LanguageFlag {
-        width: 70px;
-        height: 47px;
+    .HeroSection h1 {
+        font-size: 46px;
     }
 
-    .EducationLogo {
-        width: 70px;
-        height: 70px;
+    .HeroActions {
+        flex-direction: column;
     }
 
-    .ProjectCard {
-        min-height: 240px;
-        padding: 24px;
+    .PrimaryButton,
+    .SecondaryButton {
+        text-align: center;
     }
 
-    .EmailCard {
-        padding: 14px 16px;
-    }
-
-    .EmailAddress {
-        font-size: 16px;
-    }
-
-    .SocialLinks {
-        grid-template-columns: repeat(2, minmax(120px, 1fr));
-        gap: 16px;
-    }
-
-    .SocialCard {
-        min-height: 130px;
-        padding: 18px;
-    }
-
-    .SocialIconCircle {
-        width: 64px;
-        height: 64px;
-    }
-
-    .SocialIcon {
-        width: 36px;
-        height: 36px;
+    .ContentSection {
+        padding: 70px 0;
     }
 }
