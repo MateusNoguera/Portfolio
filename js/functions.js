@@ -4,6 +4,7 @@ const translations = {
 
         "header.about": "Sobre",
         "header.experience": "Experiência",
+        "header.education": "Formação",
         "header.projects": "Projetos",
         "header.contact": "Contato",
 
@@ -27,17 +28,32 @@ const translations = {
         "experience.geovendas.role": "Suporte ao cliente",
         "experience.geovendas.company": "GEOvendas",
         "experience.geovendas.period": "Fevereiro 2021 — Março 2021",
-        "experience.geovendas.description": "Suporte aos clientes, auxiliando na utilização dos sistemas, resolução de problemas, testes e identificação de falhas.",
+        "experience.geovendas.description": "Suporte aos clientes, auxiliando na utilização dos sistemas, resolução de problemas e testes.",
 
         "experience.bytecom.role": "Desenvolvedor de Software",
         "experience.bytecom.company": "Bytecom Sistemas",
         "experience.bytecom.period": "Setembro 2020 — Novembro 2020",
-        "experience.bytecom.description": "Desenvolvimento Delphi, implementando e gerenciando funcionalidades em sistema ERP." + "\nDesenvolvimento mobile utilizando Kotlin, Android Studio e Node.js.",
+        "experience.bytecom.description": "Desenvolvedor Delphi, implementando e gerenciando funcionalidades em sistema ERP." + "\nDesenvolvimento mobile utilizando Kotlin, Android Studio e Node.js.",
 
         "experience.dessis.role": "Desenvolvedor de Software",
         "experience.dessis.company": "Dessis Sistemas",
         "experience.dessis.period": "Maio 2018 — Agosto 2020",
-        "experience.dessis.description": "Desenvolvimento Delphi, implementando e gerenciando funcionalidades em sistemas ERP, utilizando bancos de dados Firebird e SQL Server."
+        "experience.dessis.description": "Desenvolvedor Delphi, implementando e gerenciando funcionalidades em sistema ERP, utilizando bancos de dados Firebird e SQL Server.",
+
+        "sections.education": "Formação",
+        "education.languages.title": "Idiomas",
+        "education.languages.portuguese": "Português",
+        "education.languages.english": "Inglês",
+        "education.languages.japanese": "Japonês",
+        "education.languages.native": "Nativo",
+        "education.languages.fluent": "Avançado/Fluente",
+        "education.languages.beginner": "Iniciante",
+
+        "education.academic.title": "Formação",
+        "education.academic.degree": "Tecnólogo em Sistemas para Internet",
+        "education.academic.degree.description": "Curso Superior de Tecnologia (CST)",
+        "education.academic.technical": "Técnico em Informática",
+        "education.academic.highschool": "Ensino Médio"
     },
 
     en: {
@@ -45,12 +61,13 @@ const translations = {
 
         "header.about": "About",
         "header.experience": "Experience",
+        "header.education": "Education",
         "header.projects": "Projects",
         "header.contact": "Contact",
 
         "hero.role": "Software Developer",
 
-        "hero.description": "Software developer with experience in Business Intelligence and software development, with an interest in backend, web development and game development.",
+        "hero.description": "Developer with experience in Business Intelligence and software development, with an interest in backend, web development and game development.",
 
         "hero.projects": "View projects",
         "hero.contact": "Contact",
@@ -68,17 +85,32 @@ const translations = {
         "experience.geovendas.role": "Customer Support",
         "experience.geovendas.company": "GEOvendas",
         "experience.geovendas.period": "February 2021 — March 2021",
-        "experience.geovendas.description": "Customer support, assisting users with company systems, troubleshooting, testing and identifying issues.",
+        "experience.geovendas.description": "Customer support, assisting users with company systems, troubleshooting and testing.",
 
         "experience.bytecom.role": "Software Developer",
         "experience.bytecom.company": "Bytecom Sistemas",
         "experience.bytecom.period": "September 2020 — November 2020",
-        "experience.bytecom.description": "Delphi development, implementing and managing features in an ERP system." + "\nMobile development using Kotlin, Android Studio and Node.js.",
+        "experience.bytecom.description": "Delphi developer, implementing and managing features in an ERP system." + "\nMobile development using Kotlin, Android Studio and Node.js.",
 
         "experience.dessis.role": "Software Developer",
         "experience.dessis.company": "Dessis Sistemas",
         "experience.dessis.period": "May 2018 — August 2020",
-        "experience.dessis.description": "Delphi development, implementing and managing features in ERP systems, using Firebird and SQL Server databases."
+        "experience.dessis.description": "Delphi developer, implementing and managing features in an ERP system, using Firebird and SQL Server databases.",
+
+        "sections.education": "Education",
+        "education.languages.title": "Languages",
+        "education.languages.portuguese": "Portuguese",
+        "education.languages.english": "English",
+        "education.languages.japanese": "Japanese",
+        "education.languages.native": "Native",
+        "education.languages.fluent": "Advanced/Fluent",
+        "education.languages.beginner": "Beginner",
+
+        "education.academic.title": "Education",
+        "education.academic.degree": "Internet Systems Technology Degree",
+        "education.academic.degree.description": "Higher Technology Degree",
+        "education.academic.technical": "IT Technician",
+        "education.academic.highschool": "High School"
     }
 };
 
