@@ -56,7 +56,13 @@ const translations = {
 
         "sections.projects": "Projetos",
         "projects.languageTool.description": "Ferramenta voltada para aprendizado e prática de idiomas, com funcionalidades ainda em definição.",
-        "projects.helpDesk.description": "Aplicação full-stack para gerenciamento de chamados de suporte, usuários, funções, atribuições e configurações de conta."
+        "projects.helpDesk.description": "Aplicação full-stack para gerenciamento de chamados de suporte, usuários, funções, atribuições e configurações de conta.",
+
+        "sections.contact": "Contato",
+        "contact.description": "Você pode entrar em contato comigo pelos emails abaixo ou através dos meus perfis no GitHub e LinkedIn.",
+        "contact.copyEmail": "Copiar email",
+
+        "footer.rights": "© 2026 - Todos os direitos reservados."
     },
 
     en: {
@@ -116,7 +122,13 @@ const translations = {
 
         "sections.projects": "Projects",
         "projects.languageTool.description": "A tool focused on language learning, with features still being defined.",
-        "projects.helpDesk.description": "A full-stack application for managing support tickets, users, roles, assignments and account settings."
+        "projects.helpDesk.description": "A full-stack application for managing support tickets, users, roles, assignments and account settings.",
+
+        "sections.contact": "Contact",
+        "contact.description": "You can contact me through the email addresses below or through my GitHub and LinkedIn profiles.",
+        "contact.copyEmail": "Copy email",
+
+        "footer.rights": "© 2026 - All rights reserved."
     }
 };
 
@@ -194,4 +206,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setLanguage(savedLanguage);
     setTheme(savedTheme);
+});
+
+document.querySelectorAll(".CopyButton").forEach((button) => {
+    button.addEventListener("click", async () => {
+        const emailCard = button.closest(".EmailCard");
+        const emailAddress = emailCard.querySelector(".EmailAddress").textContent.trim();
+
+        try {
+            await navigator.clipboard.writeText(emailAddress);
+
+            const originalHTML = button.innerHTML;
+
+            button.classList.add("IsCopied");
+            button.innerHTML = `
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12l4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            `;
+
+            setTimeout(() => {
+                button.classList.remove("IsCopied");
+                button.innerHTML = originalHTML;
+            }, 1500);
+        } catch (error) {
+            console.error("Erro ao copiar email:", error);
+        }
+    });
 });
