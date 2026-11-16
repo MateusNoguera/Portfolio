@@ -59,7 +59,7 @@ const translations = {
         "projects.helpDesk.description": "Aplicação full-stack para gerenciamento de chamados de suporte, usuários, funções, atribuições e configurações de conta.",
 
         "sections.contact": "Contato",
-        "contact.description": "Você pode entrar em contato comigo pelos emails abaixo ou através dos meus perfis no GitHub e LinkedIn.",
+        "contact.description": "Você pode entrar em contato comigo pelos emails abaixo ou acessar meus perfis no GitHub e LinkedIn.",
         "contact.copyEmail": "Copiar email",
 
         "footer.rights": "© 2026 - Todos os direitos reservados."
@@ -125,7 +125,7 @@ const translations = {
         "projects.helpDesk.description": "A full-stack application for managing support tickets, users, roles, assignments and account settings.",
 
         "sections.contact": "Contact",
-        "contact.description": "You can contact me through the email addresses below or through my GitHub and LinkedIn profiles.",
+        "contact.description": "You can contact me through the email addresses below or visit my GitHub and LinkedIn profiles.",
         "contact.copyEmail": "Copy email",
 
         "footer.rights": "© 2026 - All rights reserved."
