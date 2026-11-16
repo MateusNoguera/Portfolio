@@ -48,12 +48,15 @@ const translations = {
         "education.languages.native": "Nativo",
         "education.languages.fluent": "Avançado/Fluente",
         "education.languages.beginner": "Iniciante",
-
         "education.academic.title": "Formação",
         "education.academic.degree": "Tecnólogo em Sistemas para Internet",
         "education.academic.degree.description": "Curso Superior de Tecnologia (CST)",
         "education.academic.technical": "Técnico em Informática",
-        "education.academic.highschool": "Ensino Médio"
+        "education.academic.highschool": "Ensino Médio",
+
+        "sections.projects": "Projetos",
+        "projects.languageTool.description": "Ferramenta voltada para aprendizado e prática de idiomas, com funcionalidades ainda em definição.",
+        "projects.helpDesk.description": "Aplicação full-stack para gerenciamento de chamados de suporte, usuários, funções, atribuições e configurações de conta."
     },
 
     en: {
@@ -105,12 +108,15 @@ const translations = {
         "education.languages.native": "Native",
         "education.languages.fluent": "Advanced/Fluent",
         "education.languages.beginner": "Beginner",
-
         "education.academic.title": "Education",
         "education.academic.degree": "Internet Systems Technology Degree",
         "education.academic.degree.description": "Higher Technology Degree",
         "education.academic.technical": "IT Technician",
-        "education.academic.highschool": "High School"
+        "education.academic.highschool": "High School",
+
+        "sections.projects": "Projects",
+        "projects.languageTool.description": "A tool focused on language learning, with features still being defined.",
+        "projects.helpDesk.description": "A full-stack application for managing support tickets, users, roles, assignments and account settings."
     }
 };
 
